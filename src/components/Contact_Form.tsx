@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser'
-import { Send, CheckCircle } from 'lucide-react';
+import { Send, CheckCircle, TriangleAlert } from 'lucide-react';
 
 export const FormEmail: React.FC = () => {
     const [formData, setFormData] = useState({
@@ -116,19 +116,25 @@ export const FormEmail: React.FC = () => {
                 </h3>
                 {/* Primero revisa si ya envió un mail, y dsp muestra el form o el msj de enviado */}
                 {timeLeft !== null ?(
-                    <p className="text-red-500 font-medium">
+                    <div className="text-center py-12">
+                        <TriangleAlert className="h-16 w-16 text-yellow-500 mx-auto mb-4" />
+                        <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
                         Ya enviaste un mensaje. Podrás volver a enviar en {formatTime(timeLeft)}.
-                    </p>
+                        </h4>
+                        <p className="text-gray-600 dark:text-gray-400">
+                        Gracias por contactarme. Te responderé pronto.
+                        </p>
+                    </div>
                 ) : isSubmitted ?(
                     <div className="text-center py-12">
-                    <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-4" />
-                    <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                    ¡Mensaje enviado!
-                    </h4>
-                    <p className="text-gray-600 dark:text-gray-400">
-                    Gracias por contactarme. Te responderé pronto.
-                    </p>
-                </div>
+                        <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-4" />
+                        <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                        ¡Mensaje enviado!
+                        </h4>
+                        <p className="text-gray-600 dark:text-gray-400">
+                        Gracias por contactarme. Te responderé pronto.
+                        </p>
+                    </div>
                 ) : (
                 <form ref={form} onSubmit={sendEmail} className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-6">

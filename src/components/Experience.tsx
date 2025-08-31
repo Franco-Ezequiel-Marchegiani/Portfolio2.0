@@ -6,6 +6,7 @@ interface ExperienceItem {
     position: string;
     period: string;
     location: string;
+    link: string;
     description: string[];
     technologies: string[];
     current?: boolean;
@@ -20,38 +21,42 @@ export const Experience: React.FC = () => {
         position: "Fullstack Developer",
         period: "Dic 2024 - Abr 2025",
         location: "Argentina",
-        current: true,
+        link: "https://plug-zone.com/",
+        // current: true,
         description: [
             "Desarrollo de sitio Web adaptadas a la lógica del negocio.",
             "Implementación del flujo de carga de archivos con validaciones y feedback visual.",
             "Aportes en estructura de datos, experiencia de usuario y lógica del sistema.",
             "Coordinación directa con líder del proyecto y presentación de avances al cliente."
         ],
-        technologies: ["React", "Node.js", "TypeScript", "PostgreSQL", "AWS"]
-        },
-        {
+        technologies: ["React", "Node.js", "TypeScript", "PostgreSQL"]
+    },
+    {
         company: "Disbyte s.a.",
         position: "Fullstack Developer & Data Developer",
         period: "Ago 2022 - Ago 2024",
         location: "Argentina",
+        link: "https://www.disbyte.com/",
         description: [
             "Extracción y procesamiento de datos desde APIs (ej. MercadoLibre) y scraping con Python.",
             "Automatización de procesos internos de diversos sectores de la empresa.",
-            "Creación de sitios web para facilitar, agilizar y automatizar procesos."
+            "Creación de sitios web para facilitar, agilizar y automatizar procesos para distintos sectores de la empresa."
         ],
-        technologies: ["Python", "Selenium", "Pandas", "React", "Node.js", "MongoDB", "API REST"]
+        technologies: ["Python", "Selenium", "Pandas", "React", "Node.js", "PostgreSQL", "Postman", "MongoDB", "API REST", "AWS"]
         },
         {
         company: "Coderhouse",
         position: "Tutor Desarrollo Web & Front End",
         period: "Jul 2020 - Ago 2023",
         location: "Argentina",
+        link: "https://www.coderhouse.com/ar/",
         description: [
-            "Asistencia y corrección de proyectos a más de 300 estudiantes.",
+            "Asistencia y corrección de proyectos a más de 300 estudiantes por mes.",
             "Soporte a estudiantes vía Slack y en clases en vivo.",
+            "Brindar clases de apoyo con contenido y resolviendo dudas en vivo de manera sincrónica",
             "Corrección de proyectos con foco en buenas prácticas y estructura clara."
         ],
-        technologies: ["HTML", "CSS", "JavaScript", "React", "Git", "Node.js"]
+        technologies: ["HTML", "CSS", "JavaScript", "React", "Git", "Node.js", "Slack", "Metodologías Ágiles"]
         }
     ];
 
@@ -82,46 +87,48 @@ export const Experience: React.FC = () => {
                 >
                 <div className="p-6">
                     <div className="flex items-start justify-between">
-                    <div className="flex-1">
-                        <div className="flex items-center space-x-3 mb-2">
-                        <Building className="h-5 w-5 text-blue-500" />
-                        <h3 className="text-xl font-bold text-gray-900 dark:text-white">
-                            {exp.company}
-                        </h3>
-                        {exp.current && (
-                            <span className="px-3 py-1 bg-green-100 dark:bg-green-900/20 text-green-800 
-                                dark:text-green-400 text-sm font-medium rounded-full">
-                            Actual
-                            </span>
-                        )}
-                        </div>
-                        
-                        <h4 className="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-3">
-                        {exp.position}
-                        </h4>
+                        <div className="flex-1">
+                            <div className="flex items-center space-x-3 mb-2">
+                                <Building className="h-5 w-5 text-blue-500" />
+                                <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+                                    <a href={exp.link} target="_blank" rel="noopener noreferrer">
+                                        {exp.company}
+                                    </a>
+                                </h3>
+                                {exp.current && (
+                                    <span className="px-3 py-1 bg-green-100 dark:bg-green-900/20 text-green-800 
+                                        dark:text-green-400 text-sm font-medium rounded-full">
+                                    Actual
+                                    </span>
+                                )}
+                            </div>
+                            
+                            <h4 className="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-3">
+                            {exp.position}
+                            </h4>
 
-                        <div className="flex flex-col sm:flex-row sm:items-center space-y-2 sm:space-y-0 sm:space-x-6 mb-4">
-                        <div className="flex items-center space-x-2 text-gray-500 dark:text-gray-400">
-                            <Calendar className="h-4 w-4" />
-                            <span className="text-sm">{exp.period}</span>
+                            <div className="flex flex-col sm:flex-row sm:items-center space-y-2 sm:space-y-0 sm:space-x-6 mb-4">
+                                <div className="flex items-center space-x-2 text-gray-500 dark:text-gray-400">
+                                    <Calendar className="h-4 w-4" />
+                                    <span className="text-sm">{exp.period}</span>
+                                </div>
+                            <div className="flex items-center space-x-2 text-gray-500 dark:text-gray-400">
+                                <MapPin className="h-4 w-4" />
+                                <span className="text-sm">{exp.location}</span>
+                            </div>
+                            </div>
                         </div>
-                        <div className="flex items-center space-x-2 text-gray-500 dark:text-gray-400">
-                            <MapPin className="h-4 w-4" />
-                            <span className="text-sm">{exp.location}</span>
-                        </div>
-                        </div>
-                    </div>
 
-                    <button
-                        onClick={() => toggleExpansion(index)}
-                        className="ml-4 p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 
-                                dark:hover:bg-gray-600 transition-colors duration-200"
-                    >
-                        {expandedIndex === index ? 
-                        <ChevronUp className="h-5 w-5 text-gray-600 dark:text-gray-400" /> : 
-                        <ChevronDown className="h-5 w-5 text-gray-600 dark:text-gray-400" />
-                        }
-                    </button>
+                        <button
+                            onClick={() => toggleExpansion(index)}
+                            className="ml-4 p-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 
+                                    dark:hover:bg-gray-600 transition-colors duration-200"
+                        >
+                            {expandedIndex === index ? 
+                            <ChevronUp className="h-5 w-5 text-gray-600 dark:text-gray-400" /> : 
+                            <ChevronDown className="h-5 w-5 text-gray-600 dark:text-gray-400" />
+                            }
+                        </button>
                     </div>
 
                     {/* Preview - First description item */}
@@ -129,7 +136,7 @@ export const Experience: React.FC = () => {
                     <p className="text-gray-600 dark:text-gray-400">
                         {exp.description[0]}
                     </p>
-                    {!expandedIndex || expandedIndex !== index ? (
+                    {expandedIndex !== index && (
                         <button
                         onClick={() => toggleExpansion(index)}
                         className="mt-2 text-blue-600 dark:text-blue-400 hover:text-blue-700 
@@ -137,7 +144,7 @@ export const Experience: React.FC = () => {
                         >
                         Ver más detalles...
                         </button>
-                    ) : null}
+                    )}
                     </div>
 
                     {/* Expanded Content */}

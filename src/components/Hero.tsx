@@ -8,7 +8,7 @@ export const Hero: React.FC = () => {
         location: 'CABA, Buenos Aires - Argentina',
         github: 'https://github.com/Franco-Ezequiel-Marchegiani',
         linkedin: 'https://www.linkedin.com/in/franco-e-marchegiani/',
-        portfolio: 'https://franco-ezequiel-marchegiani.github.io/portfolio/',
+        cv: 'https://www.canva.com/design/DAGOsU3CpG4/rYxB7omo1UDvwW4rFvQX3Q/view?utm_content=DAGOsU3CpG4&utm_campaign=designshare&utm_medium=link&utm_source=editor',
         references: 'https://docs.google.com/document/d/1Cz4A_U9j0aeN1c59jVKFEofqORmev4vlbMx-970AD6M/edit?usp=sharing'
     };
 
@@ -47,7 +47,9 @@ export const Hero: React.FC = () => {
                 </div>
                 <div className="flex items-center justify-center lg:justify-start space-x-2">
                     <MapPin className="h-4 w-4 text-orange-500" />
-                    <span>{contactInfo.location}</span>
+                    <a href="https://www.google.com.ar/maps/place/Villa+Urquiza,+Cdad.+Aut%C3%B3noma+de+Buenos+Aires/@-34.5719608,-58.4990465,15z/data=!3m1!4b1!4m6!3m5!1s0x95bcb65c360890c1:0x8bd20bac2f970066!8m2!3d-34.5703983!4d-58.4913868!16zL20vMDV2Yms0?entry=ttu&g_ep=EgoyMDI1MDgyNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" className="hover:text-orange-500 transition-colors">
+                    {contactInfo.location}
+                    </a>
                 </div>
                 </div>
 
@@ -72,7 +74,7 @@ export const Hero: React.FC = () => {
                     <Linkedin className="h-5 w-5 text-blue-600 dark:text-blue-400 group-hover:text-blue-700 dark:group-hover:text-blue-300" />
                 </a>
                 <a
-                    href={contactInfo.portfolio}
+                    href={contactInfo.cv}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 bg-green-100 dark:bg-green-900/20 rounded-lg hover:bg-green-200 dark:hover:bg-green-900/40 

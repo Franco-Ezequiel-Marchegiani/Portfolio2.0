@@ -15,8 +15,8 @@ export const Footer: React.FC = () => {
         },
         {
         icon: <ExternalLink className="h-5 w-5" />,
-        href: 'https://franco-ezequiel-marchegiani.github.io/portfolio/',
-        label: 'Portfolio'
+        href: 'https://www.canva.com/design/DAGOsU3CpG4/rYxB7omo1UDvwW4rFvQX3Q/view?utm_content=DAGOsU3CpG4&utm_campaign=designshare&utm_medium=link&utm_source=editor',
+        label: 'Cv'
         },
         {
         icon: <Mail className="h-5 w-5" />,
@@ -119,7 +119,13 @@ export const Footer: React.FC = () => {
                 </div>
                 <div>
                     <p className="font-medium text-white mb-1">Ubicación</p>
-                    <p>CABA, Buenos Aires - Argentina</p>
+                    <a 
+                    href="https://www.google.com.ar/maps/place/Villa+Urquiza,+Cdad.+Aut%C3%B3noma+de+Buenos+Aires/@-34.5719608,-58.4990465,15z/data=!3m1!4b1!4m6!3m5!1s0x95bcb65c360890c1:0x8bd20bac2f970066!8m2!3d-34.5703983!4d-58.4913868!16zL20vMDV2Yms0?entry=ttu&g_ep=EgoyMDI1MDgyNC4wIKXMDSoASAFQAw%3D%3D"
+                    className="hover:text-white transition-colors duration-200"
+                    target="_blank"
+                    >
+                    CABA, Buenos Aires - Argentina
+                    </a>
                 </div>
                 <div className="pt-4">
                     <a
@@ -146,7 +152,12 @@ export const Footer: React.FC = () => {
                 <span>usando React y Tailwind CSS</span>
                 </div>
                 <div className="text-gray-400 text-sm">
-                <p>&copy; {new Date().getFullYear()} Franco Marchegiani. Todos los derechos reservados.</p>
+                <p>&copy; {new Date().getFullYear()} {'\n'} 
+                    <a href="https://www.linkedin.com/in/franco-e-marchegiani/" target="_blank"className="hover:text-white transition-colors duration-200"> 
+                    Franco Marchegiani.
+                    </a> 
+                    {'\n'} Todos los derechos reservados.
+                </p>
                 </div>
             </div>
             </div>

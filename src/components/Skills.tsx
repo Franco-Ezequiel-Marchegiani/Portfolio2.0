@@ -7,7 +7,8 @@ interface SkillCategory {
     color: string;
     skills: Array<{
         name: string;
-        level: number;
+        years: number;
+        description?: string;
     }>;
 }
 
@@ -18,11 +19,11 @@ export const Skills: React.FC = () => {
         icon: <Palette className="h-6 w-6" />,
         color: "blue",
         skills: [
-            { name: "React.JS & Redux-Toolkit", level: 90 },
-            { name: "JavaScript & TypeScript", level: 85 },
-            { name: "HTML, CSS & Sass", level: 90 },
-            { name: "Next.JS", level: 80 },
-            { name: "Bootstrap & MaterialUI", level: 85 },
+            { name: "React.JS & Redux-Toolkit", years: 4, description: "Desarrollo avanzado" },
+            { name: "JavaScript & TypeScript", years: 5, description: "Uso diario" },
+            { name: "HTML, CSS & Sass", years: 6, description: "Dominio completo" },
+            { name: "Next.JS", years: 3, description: "Proyectos comerciales" },
+            { name: "Bootstrap & MaterialUI", years: 4, description: "UI frameworks" },
         ]
         },
         {
@@ -30,10 +31,10 @@ export const Skills: React.FC = () => {
         icon: <Code className="h-6 w-6" />,
         color: "green",
         skills: [
-            { name: "Node.js", level: 85 },
-            { name: "Python / Selenium / Pandas", level: 90 },
-            { name: "API REST", level: 85 },
-            { name: "Microservicios", level: 75 },
+            { name: "Node.js", years: 4, description: "APIs y microservicios" },
+            { name: "Python / Selenium / Pandas", years: 5, description: "Automatización y datos" },
+            { name: "API REST", years: 4, description: "Diseño y desarrollo" },
+            { name: "Microservicios", years: 2, description: "Arquitectura distribuida" },
         ]
         },
         {
@@ -41,10 +42,10 @@ export const Skills: React.FC = () => {
         icon: <Database className="h-6 w-6" />,
         color: "orange",
         skills: [
-            { name: "SQL & Databases", level: 80 },
-            { name: "PostgreSQL", level: 75 },
-            { name: "MongoDB", level: 70 },
-            { name: "Redis", level: 65 },
+            { name: "SQL & Databases", years: 4, description: "Diseño y optimización" },
+            { name: "PostgreSQL", years: 3, description: "Base de datos principal" },
+            { name: "MongoDB", years: 3, description: "NoSQL y agregaciones" },
+            { name: "Redis", years: 2, description: "Cache y sesiones" },
         ]
         },
         {
@@ -52,10 +53,10 @@ export const Skills: React.FC = () => {
         icon: <Wrench className="h-6 w-6" />,
         color: "purple",
         skills: [
-            { name: "Git - Github", level: 90 },
-            { name: "Trello, Azure & Notion", level: 85 },
-            { name: "Docker", level: 70 },
-            { name: "AWS", level: 65 },
+            { name: "Git - Github", years: 6, description: "Control de versiones" },
+            { name: "Trello, Azure & Notion", years: 4, description: "Gestión de proyectos" },
+            { name: "Docker", years: 2, description: "Containerización" },
+            { name: "AWS", years: 2, description: "Cloud computing" },
         ]
         },
         {
@@ -63,10 +64,10 @@ export const Skills: React.FC = () => {
         icon: <GitBranch className="h-6 w-6" />,
         color: "indigo",
         skills: [
-            { name: "SCRUM", level: 85 },
-            { name: "Clean Code", level: 90 },
-            { name: "Patrones de Diseño", level: 80 },
-            { name: "TDD", level: 70 },
+            { name: "SCRUM", years: 4, description: "Metodología ágil" },
+            { name: "Clean Code", years: 5, description: "Buenas prácticas" },
+            { name: "Patrones de Diseño", years: 3, description: "Arquitectura de software" },
+            { name: "TDD", years: 2, description: "Testing automatizado" },
         ]
         },
         {
@@ -74,10 +75,10 @@ export const Skills: React.FC = () => {
         icon: <Users className="h-6 w-6" />,
         color: "pink",
         skills: [
-            { name: "Mentoría", level: 95 },
-            { name: "Trabajo en Equipo", level: 90 },
-            { name: "Comunicación", level: 88 },
-            { name: "Inglés B2", level: 80 },
+            { name: "Mentoría", years: 4, description: "300+ estudiantes" },
+            { name: "Trabajo en Equipo", years: 6, description: "Colaboración efectiva" },
+            { name: "Comunicación", years: 6, description: "Cliente y equipo" },
+            { name: "Inglés B2", years: 8, description: "Certificado oficial" },
         ]
         }
     ];
@@ -162,19 +163,46 @@ export const Skills: React.FC = () => {
                     <div className="space-y-4">
                     {category.skills.map((skill, skillIndex) => (
                         <div key={skillIndex}>
-                        <div className="flex justify-between items-center mb-2">
-                            <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                            {skill.name}
-                            </span>
-                            <span className="text-sm text-gray-500 dark:text-gray-400">
-                            {skill.level}%
-                            </span>
+                        <div className="flex justify-between items-start mb-3">
+                            <div className="flex-1">
+                            <h4 className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                                {skill.name}
+                            </h4>
+                            {skill.description && (
+                                <p className="text-xs text-gray-500 dark:text-gray-400">
+                                {skill.description}
+                                </p>
+                            )}
+                            </div>
+                            <div className="text-right ml-3">
+                            <div className="flex items-center space-x-1">
+                                <span className="text-lg font-bold text-gray-900 dark:text-white">
+                                {skill.years}
+                                </span>
+                                <span className="text-xs text-gray-500 dark:text-gray-400">
+                                {skill.years === 1 ? 'año' : 'años'}
+                                </span>
+                            </div>
+                            </div>
                         </div>
-                        <div className={`w-full h-2 ${colors.progressBg} rounded-full overflow-hidden`}>
+                        
+                        {/* Visual indicator based on years */}
+                        <div className="flex items-center space-x-1">
+                            {[...Array(6)].map((_, dotIndex) => (
                             <div
-                            className={`h-full ${colors.progress} rounded-full transition-all duration-1000 ease-out`}
-                            style={{ width: `${skill.level}%` }}
+                                key={dotIndex}
+                                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                                dotIndex < skill.years 
+                                    ? colors.progress 
+                                    : colors.progressBg
+                                }`}
                             />
+                            ))}
+                            {skill.years > 6 && (
+                            <span className="text-xs text-gray-500 dark:text-gray-400 ml-2">
+                                +{skill.years - 6}
+                            </span>
+                            )}
                         </div>
                         </div>
                     ))}

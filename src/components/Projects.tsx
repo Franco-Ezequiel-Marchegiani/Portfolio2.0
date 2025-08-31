@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Github, ExternalLink, Code, Database, Smartphone, ChevronDown, ChevronUp } from 'lucide-react';
+import { Github, ExternalLink, Code, Database, Smartphone, ChevronDown, ChevronUp, Gamepad2, Plus } from 'lucide-react';
 
 interface Project {
     title: string;
@@ -16,8 +16,9 @@ interface Project {
 export const Projects: React.FC = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [expandedProject, setExpandedProject] = useState<number | null>(null);
+    const [showAllProjects, setShowAllProjects] = useState(false);
 
-  // Proyectos de ejemplo - aquí podrás agregar tus proyectos reales
+    // Proyectos de ejemplo - aquí podrás agregar tus proyectos reales
     const projects: Project[] = [
         {
         title: "Sistema de Automatización - Disbyte",
@@ -63,6 +64,52 @@ export const Projects: React.FC = () => {
             "Calificación automatizada"
         ],
         image: "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=800"
+        },
+        {
+        title: "Juego Python - Snake Game",
+        description: "Implementación del clásico juego Snake desarrollado en Python con interfaz gráfica",
+        longDescription: "Recreación completa del juego Snake utilizando Python y Pygame. Incluye sistema de puntuación, niveles de dificultad, efectos sonoros y guardado de records personales.",
+        technologies: ["Python", "Pygame", "JSON", "OOP"],
+        category: "games",
+        github: "https://github.com/Franco-Ezequiel-Marchegiani/snake-game",
+        features: [
+            "Mecánicas clásicas del Snake",
+            "Sistema de puntuación y records",
+            "Múltiples niveles de dificultad",
+            "Efectos sonoros y visuales",
+            "Guardado de configuraciones"
+        ],
+        image: "https://images.pexels.com/photos/442576/pexels-photo-442576.jpeg?auto=compress&cs=tinysrgb&w=800"
+        },
+        {
+        title: "Dashboard Analytics - React",
+        description: "Panel de control para visualización de datos con gráficos interactivos",
+        longDescription: "Dashboard completo para análisis de datos empresariales con múltiples tipos de gráficos, filtros avanzados y exportación de reportes.",
+        technologies: ["React", "Chart.js", "TypeScript", "Tailwind CSS"],
+        category: "web",
+        features: [
+            "Gráficos interactivos en tiempo real",
+            "Filtros avanzados por fecha y categoría",
+            "Exportación a PDF y Excel",
+            "Responsive design",
+            "Modo oscuro/claro"
+        ],
+        image: "https://images.pexels.com/photos/590020/pexels-photo-590020.jpeg?auto=compress&cs=tinysrgb&w=800"
+        },
+        {
+        title: "API REST - E-commerce",
+        description: "Backend completo para tienda online con autenticación y pagos",
+        longDescription: "API REST robusta para e-commerce con sistema de autenticación JWT, integración de pagos, gestión de inventario y panel administrativo.",
+        technologies: ["Node.js", "Express", "MongoDB", "JWT", "Stripe"],
+        category: "web",
+        features: [
+            "Autenticación JWT segura",
+            "Integración con Stripe",
+            "Gestión de inventario",
+            "Panel administrativo",
+            "Documentación con Swagger"
+        ],
+        image: "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800"
         }
     ];
 
@@ -71,11 +118,15 @@ export const Projects: React.FC = () => {
         { id: 'web', label: 'Web Apps', icon: <Smartphone className="h-4 w-4" /> },
         { id: 'automation', label: 'Automatización', icon: <Database className="h-4 w-4" /> },
         { id: 'education', label: 'Educación', icon: <Code className="h-4 w-4" /> },
+        { id: 'games', label: 'Juegos', icon: <Gamepad2 className="h-4 w-4" /> },
     ];
 
     const filteredProjects = selectedCategory === 'all' 
         ? projects 
         : projects.filter(project => project.category === selectedCategory);
+
+    // Mostrar solo los primeros 3 proyectos inicialmente, o todos si showAllProjects es true
+    const displayedProjects = showAllProjects ? filteredProjects : filteredProjects.slice(0, 3);
 
     const toggleProjectExpansion = (index: number) => {
         setExpandedProject(expandedProject === index ? null : index);
@@ -114,8 +165,8 @@ export const Projects: React.FC = () => {
             </div>
 
             {/* Projects Grid */}
-            <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
-            {filteredProjects.map((project, index) => (
+            <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8 mb-12">
+            {displayedProjects.map((project, index) => (
                 <div
                 key={index}
                 className="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg 
@@ -249,6 +300,23 @@ export const Projects: React.FC = () => {
                 </div>
             ))}
             </div>
+
+            {/* Show More Projects Button */}
+            {filteredProjects.length > 3 && (
+            <div className="text-center mb-16">
+                <button
+                onClick={() => setShowAllProjects(!showAllProjects)}
+                className="flex items-center space-x-2 mx-auto px-8 py-3 bg-white dark:bg-gray-800 
+                        border-2 border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 
+                        font-medium rounded-lg hover:bg-blue-600 hover:text-white dark:hover:bg-blue-400 
+                        dark:hover:text-gray-900 transform hover:scale-105 transition-all duration-200 
+                        shadow-lg hover:shadow-xl"
+                >
+                <Plus className={`h-5 w-5 transform transition-transform duration-200 ${showAllProjects ? 'rotate-45' : ''}`} />
+                <span>{showAllProjects ? 'Ver menos proyectos' : `Ver todos los proyectos (${filteredProjects.length})`}</span>
+                </button>
+            </div>
+            )}
 
             {filteredProjects.length === 0 && (
             <div className="text-center py-12">

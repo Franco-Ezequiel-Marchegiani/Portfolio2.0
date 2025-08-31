@@ -19,10 +19,10 @@ export const Skills: React.FC = () => {
         icon: <Palette className="h-6 w-6" />,
         color: "blue",
         skills: [
-            { name: "React.JS & Redux-Toolkit", years: 4, description: "Desarrollo avanzado" },
-            { name: "JavaScript & TypeScript", years: 5, description: "Uso diario" },
+            { name: "React.JS & Redux-Toolkit", years: 3, description: "Desarrollo avanzado" },
+            { name: "JavaScript & TypeScript", years: 4, description: "Uso diario" },
             { name: "HTML, CSS & Sass", years: 6, description: "Dominio completo" },
-            { name: "Next.JS", years: 3, description: "Proyectos comerciales" },
+            { name: "Next.JS", years: 1, description: "Proyectos comerciales" },
             { name: "Bootstrap & MaterialUI", years: 4, description: "UI frameworks" },
         ]
         },
@@ -31,8 +31,8 @@ export const Skills: React.FC = () => {
         icon: <Code className="h-6 w-6" />,
         color: "green",
         skills: [
-            { name: "Node.js", years: 4, description: "APIs y microservicios" },
-            { name: "Python / Selenium / Pandas", years: 5, description: "Automatización y datos" },
+            { name: "Node.js", years: 3, description: "APIs y microservicios" },
+            { name: "Python / Selenium / Pandas", years: 2, description: "Automatización y datos" },
             { name: "API REST", years: 4, description: "Diseño y desarrollo" },
             { name: "Microservicios", years: 2, description: "Arquitectura distribuida" },
         ]
@@ -45,7 +45,7 @@ export const Skills: React.FC = () => {
             { name: "SQL & Databases", years: 4, description: "Diseño y optimización" },
             { name: "PostgreSQL", years: 3, description: "Base de datos principal" },
             { name: "MongoDB", years: 3, description: "NoSQL y agregaciones" },
-            { name: "Redis", years: 2, description: "Cache y sesiones" },
+            { name: "SQL Server", years: 1, description: "Cache y sesiones" },
         ]
         },
         {
@@ -55,8 +55,8 @@ export const Skills: React.FC = () => {
         skills: [
             { name: "Git - Github", years: 6, description: "Control de versiones" },
             { name: "Trello, Azure & Notion", years: 4, description: "Gestión de proyectos" },
-            { name: "Docker", years: 2, description: "Containerización" },
-            { name: "AWS", years: 2, description: "Cloud computing" },
+            { name: "Docker", years: 1, description: "Containerización" },
+            { name: "AWS", years: 1, description: "Cloud computing" },
         ]
         },
         {
@@ -75,10 +75,10 @@ export const Skills: React.FC = () => {
         icon: <Users className="h-6 w-6" />,
         color: "pink",
         skills: [
-            { name: "Mentoría", years: 4, description: "300+ estudiantes" },
+            { name: "Mentoría", years: 4, description: "300+ estudiantes por mes" },
             { name: "Trabajo en Equipo", years: 6, description: "Colaboración efectiva" },
             { name: "Comunicación", years: 6, description: "Cliente y equipo" },
-            { name: "Inglés B2", years: 8, description: "Certificado oficial" },
+            { name: "Inglés B2", years: 6, description: "Certificado oficial" },
         ]
         }
     ];

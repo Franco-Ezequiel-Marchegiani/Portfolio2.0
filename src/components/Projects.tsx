@@ -66,12 +66,13 @@ export const Projects: React.FC = () => {
         image: "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=800"
         },
         {
-        title: "Juego Python - Snake Game",
+        title: "Juego Python - Dragon Ball TCG (Trading Card Game)", 
         description: "Implementación del clásico juego Snake desarrollado en Python con interfaz gráfica",
         longDescription: "Recreación completa del juego Snake utilizando Python y Pygame. Incluye sistema de puntuación, niveles de dificultad, efectos sonoros y guardado de records personales.",
-        technologies: ["Python", "Pygame", "JSON", "OOP"],
+        technologies: ["Python", "Pygame", "JSON"],
         category: "games",
-        github: "https://github.com/Franco-Ezequiel-Marchegiani/snake-game",
+        demo: "https://www.youtube.com/watch?v=Vvgqh8Vshlg&ab_channel=PejeGZ",
+        github: "https://github.com/Franco-Ezequiel-Marchegiani/TPFinal_Div315_Marchegiani_Franco?tab=readme-ov-file",
         features: [
             "Mecánicas clásicas del Snake",
             "Sistema de puntuación y records",

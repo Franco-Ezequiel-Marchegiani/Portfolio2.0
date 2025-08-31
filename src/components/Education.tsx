@@ -140,8 +140,10 @@ export const Education: React.FC = () => {
             {/* Certifications */}
             <div>
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 flex items-center">
-                <Award className="h-6 w-6 mr-3 text-green-500" />
-                Certificaciones
+                    <a className='flex items-center' href="https://drive.google.com/drive/folders/1fulbnGmD6OEi4naRnUlknbzJ0m6CW0N_?usp=sharing" target="_blank" rel="noopener noreferrer">
+                        <Award className="h-6 w-6 mr-3 text-green-500" />
+                        Certificaciones
+                    </a>
                 </h3>
                 
                 <div className="grid md:grid-cols-2 gap-6">

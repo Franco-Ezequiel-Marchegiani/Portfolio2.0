@@ -51,7 +51,7 @@ export const Experience: React.FC = () => {
         location: "Argentina",
         link: "https://www.coderhouse.com/ar/",
         description: [
-            "Asistencia y corrección de proyectos a más de 300 estudiantes por mes.",
+            "Asistencia, corrección de proyectos y clases de apoyo a más de 300 estudiantes por mes.",
             "Soporte a estudiantes vía Slack y en clases en vivo.",
             "Brindar clases de apoyo con contenido y resolviendo dudas en vivo de manera sincrónica",
             "Corrección de proyectos con foco en buenas prácticas y estructura clara."
@@ -90,7 +90,7 @@ export const Experience: React.FC = () => {
                         <div className="flex-1">
                             <div className="flex items-center space-x-3 mb-2">
                                 <Building className="h-5 w-5 text-blue-500" />
-                                <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+                                <h3 className="text-xl font-bold text-gray-900 dark:text-white hover:scale-105 transition-all duration-200">
                                     <a href={exp.link} target="_blank" rel="noopener noreferrer">
                                         {exp.company}
                                     </a>

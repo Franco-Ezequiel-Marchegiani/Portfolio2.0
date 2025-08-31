@@ -4,6 +4,7 @@ import { Certification } from './Certifications';
 
 interface EducationItem {
     institution: string;
+    link: string;
     degree: string;
     period: string;
     status: string;
@@ -15,6 +16,7 @@ export const Education: React.FC = () => {
     const education: EducationItem[] = [
         {
         institution: "UTN",
+        link: "https://fra.utn.edu.ar/tecnicatura-universitaria/",
         degree: "Tecnicatura Universitaria en Programación",
         period: "2024 - Actualidad",
         status: "En curso",
@@ -23,6 +25,7 @@ export const Education: React.FC = () => {
         },
         {
         institution: "Digital House",
+        link: "https://www.digitalhouse.com/ar",
         degree: "Certified Tech Developer",
         period: "2023 - 2024",
         status: "Egresado",
@@ -31,6 +34,7 @@ export const Education: React.FC = () => {
         },
         {
         institution: "Digital House",
+        link: "https://www.digitalhouse.com/ar",
         degree: "Fullstack Web Developer",
         period: "2021 - 2022",
         status: "Egresado",
@@ -73,7 +77,9 @@ export const Education: React.FC = () => {
                         <div className="flex-1">
                         <div className="flex items-center space-x-3 mb-2">
                             <h4 className="text-xl font-bold text-gray-900 dark:text-white">
-                            {edu.institution}
+                                <a href={edu.link} target="_blank" rel="noopener noreferrer">
+                                    {edu.institution}
+                                </a>
                             </h4>
                             <span className={`px-3 py-1 rounded-full text-sm font-medium ${
                             edu.status === 'En curso'
@@ -85,7 +91,9 @@ export const Education: React.FC = () => {
                         </div>
                         
                         <h5 className="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-2">
-                            {edu.degree}
+                            <a href={edu.link} target="_blank" rel="noopener noreferrer">
+                                {edu.degree}
+                            </a>
                         </h5>
                         
                         <div className="flex items-center space-x-2 text-gray-500 dark:text-gray-400 mb-3">

@@ -11,6 +11,7 @@ interface Project {
     demo?: string;
     features: string[];
     image: string;
+    link: string;
 }
 
 export const Projects: React.FC = () => {
@@ -21,55 +22,81 @@ export const Projects: React.FC = () => {
     // Proyectos de ejemplo - aquí podrás agregar tus proyectos reales
     const projects: Project[] = [
         {
-        title: "Sistema de Automatización - Disbyte",
-        description: "Automatización de procesos internos con scraping de datos desde APIs de MercadoLibre",
-        longDescription: "Sistema completo que automatiza la extracción y procesamiento de datos desde múltiples APIs, especialmente MercadoLibre. Incluye dashboard de monitoreo, alertas automáticas y reportes en tiempo real.",
-        technologies: ["Python", "Selenium", "Pandas", "PostgreSQL", "React", "Node.js"],
+        title: "Automatización y Procesos ETL",
+        description: "Desarrollo de procesos de scraping y ETL para recolección, transformación y visualización de datos en tiempo real.",
+        longDescription: "Proyecto orientado a la automatización de tareas repetitivas y la gestión de datos. Implementé procesos completos de scraping mediante Selenium para extraer información de fuentes externas, y pipelines ETL desarrollados en Python con Pandas para limpiar, transformar y adaptar los datos. Los resultados eran almacenados en bases de datos y visualizados en reportes dinámicos, optimizando el acceso a información clave. Todo el flujo fue versionado y controlado en GitHub, asegurando escalabilidad y mantenimiento del código.",
+        technologies: ["Python", "Selenium", "Pandas", "GitHub"],
         category: "automation",
+        github: "https://github.com/Franco-Ezequiel-Marchegiani",
         features: [
-            "Scraping automatizado de productos",
-            "Procesamiento de datos en tiempo real",
-            "Dashboard de monitoreo",
-            "Sistema de alertas",
-            "Exportación de reportes"
+            "Scraping de datos desde múltiples fuentes externas",
+            "Procesos ETL para limpieza, transformación y carga de información",
+            "Automatización de tareas repetitivas",
+            "Visualización de datos y generación de reportes dinámicos",
+            "Control de versiones y colaboración con GitHub"
         ],
-        image: "https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=800"
+        image: "https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=800",
+        link: "https://github.com/Franco-Ezequiel-Marchegiani"
+
         },
         {
-        title: "Plataforma Web - Plug-zone",
-        description: "Desarrollo de sitio web adaptado a la lógica del negocio con gestión de archivos",
-        longDescription: "Aplicación web completa con sistema de gestión de archivos, validaciones en tiempo real y feedback visual. Incluye coordinación con cliente y presentación de avances.",
-        technologies: ["React", "TypeScript", "Node.js", "PostgreSQL", "AWS"],
+        title: "Red Social - Simulación Twitter / 'X' ",
+        description: "Aplicación web interactiva que recrea la experiencia de una red social moderna, con publicaciones, likes, retweets y sistema de seguidores.",
+        longDescription: "Proyecto desarrollado en Next.js que simula una red social al estilo Twitter/X. La plataforma ofrece una experiencia de usuario fluida y dinámica, permitiendo registrarse o iniciar sesión, publicar contenido, dar likes, realizar retweets y seguir a otros usuarios. Pensada como un entorno práctico para demostrar habilidades en desarrollo fullstack, combina autenticación segura con funcionalidades sociales atractivas.",
+        // technologies: ["Python", "Selenium", "Pandas", "PostgreSQL", "React", "Node.js"],
+        technologies: ["React", "Next.JS", "Strapi", "PostgreSQL", "Git & Github"],
         category: "web",
+        github: "https://github.com/Franco-Ezequiel-Marchegiani/NEXT-JS_DH",
         features: [
-            "Carga de archivos con validación",
-            "Feedback visual en tiempo real",
-            "Sistema de notificaciones",
-            "Panel administrativo",
-            "Integración con AWS"
+            "Autenticación con registro e inicio de sesión",
+            "Creación e interacción con publicaciones",
+            "Likes y retweets para fomentar la participación",
+            "Seguimiento de usuarios para crear comunidad",
+            "Interfaz intuitiva y navegación fluida"
         ],
-        image: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800"
+        image: "https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=800",
+        link: "https://github.com/Franco-Ezequiel-Marchegiani/NEXT-JS_DH"
         },
         {
-        title: "Portal Educativo - Coderhouse",
-        description: "Herramientas para corrección y seguimiento de más de 300 estudiantes",
-        longDescription: "Sistema de gestión educativa que permite el seguimiento de estudiantes, corrección automatizada de proyectos y generación de reportes de progreso.",
-        technologies: ["React", "Node.js", "MongoDB", "Socket.io", "HTML", "CSS"],
-        category: "education",
+        title: "Weather App",
+        description: "Aplicación web para consultar el clima en cualquier parte del mundo, con diseño atractivo, responsive y modo oscuro.",
+        longDescription: "Desarrollada con React, esta aplicación permite consultar las condiciones climáticas de la próxima semana en cualquier región registrada en la API pública utilizada. La información se actualiza en tiempo real, ofreciendo datos precisos de múltiples países y ciudades. El diseño es interactivo, moderno y totalmente responsive, incluyendo un modo oscuro para mejorar la experiencia del usuario.",
+        technologies: ["React", "Javascript", "API REST", "TypeScript", "Git & Github"],
+        category: "web",
+        github: "https://github.com/Franco-Ezequiel-Marchegiani/challenge-weatherReport",
         features: [
-            "Sistema de corrección automática",
-            "Seguimiento de estudiantes",
-            "Chat en tiempo real",
-            "Reportes de progreso",
-            "Calificación automatizada"
+            "Consulta de pronóstico semanal en cualquier parte del mundo",
+            "Actualización en tiempo real de la información",
+            "Diseño responsive optimizado para distintos dispositivos",
+            "Modo oscuro para una experiencia más personalizada",
+            "Interfaz intuitiva y atractiva"
         ],
-        image: "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=800"
+        image: "https://cdn.dribbble.com/userupload/8911520/file/original-3b56224a185decf93892aabb386cb2c6.jpg",
+        link: "https://github.com/Franco-Ezequiel-Marchegiani/challenge-weatherReport"
+        },
+        {
+        title: "GitHub Jobs",
+        description: "Portal web para visualizar ofertas laborales en tecnología, con diseño minimalista y navegación ágil.",
+        longDescription: "Este sitio simula un portal de empleo donde los usuarios pueden explorar ofertas laborales en tecnología. La información de cada puesto (empresa, descripción, rango salarial, etc.) se obtiene dinámicamente desde APIs de terceros. La interfaz es 100% responsive, con un diseño minimalista que permite una navegación fluida y sin distracciones.",
+        technologies: ["React", "Javascript", "API REST", "TypeScript", "Git & Github"],
+        category: "web",
+        demo: "https://github-jobs-proyect.firebaseapp.com/",
+        github: "https://github.com/Franco-Ezequiel-Marchegiani/github_jobs_challenge",
+        features: [
+            "Visualización de ofertas laborales en tecnología",
+            "Obtención dinámica de datos desde APIs externas",
+            "Diseño minimalista y responsive",
+            "Búsqueda y filtrado simple de vacantes",
+            "Experiencia de usuario optimizada"
+        ],
+        image: "https://mir-s3-cdn-cf.behance.net/project_modules/1400/431733108909275.5fc7e8d90f04d.png",
+        link: "https://github-jobs-proyect.firebaseapp.com/"
         },
         {
         title: "Juego Python - Dragon Ball TCG (Trading Card Game)", 
         description: "Implementación del clásico juego Snake desarrollado en Python con interfaz gráfica",
         longDescription: "Recreación completa del juego Snake utilizando Python y Pygame. Incluye sistema de puntuación, niveles de dificultad, efectos sonoros y guardado de records personales.",
-        technologies: ["Python", "Pygame", "JSON"],
+        technologies: ["Python", "Pygame", "JSON", "Git & Github"],
         category: "games",
         demo: "https://www.youtube.com/watch?v=Vvgqh8Vshlg&ab_channel=PejeGZ",
         github: "https://github.com/Franco-Ezequiel-Marchegiani/TPFinal_Div315_Marchegiani_Franco?tab=readme-ov-file",
@@ -80,37 +107,44 @@ export const Projects: React.FC = () => {
             "Efectos sonoros y visuales",
             "Guardado de configuraciones"
         ],
-        image: "https://images.pexels.com/photos/442576/pexels-photo-442576.jpeg?auto=compress&cs=tinysrgb&w=800"
+        image: "https://i.ytimg.com/vi/Hdt4sbNc1NA/hqdefault.jpg",
+        link: "https://www.youtube.com/watch?v=Vvgqh8Vshlg&ab_channel=PejeGZ"
         },
         {
-        title: "Dashboard Analytics - React",
-        description: "Panel de control para visualización de datos con gráficos interactivos",
-        longDescription: "Dashboard completo para análisis de datos empresariales con múltiples tipos de gráficos, filtros avanzados y exportación de reportes.",
-        technologies: ["React", "Chart.js", "TypeScript", "Tailwind CSS"],
-        category: "web",
+        title: "Quiz App",
+        description: "Juego interactivo de preguntas y respuestas en dos idiomas, con opciones de capitales y banderas.",
+        longDescription: "Aplicación tipo trivia desarrollada con React, donde el usuario puede elegir idioma (español o inglés) y modalidad de juego. En 'Capitales', debe adivinar el país al que corresponde una capital aleatoria. En 'Banderas', se muestran banderas obtenidas de una API pública y el usuario debe adivinar su país de origen. El juego finaliza al primer error, fomentando el desafío y la rejugabilidad.",
+        technologies: ["React", "API REST", "JavaScript", "CSS"],
+        category: "games",
+        demo: "https://quiz-app-game-c940b.web.app/",
+        github: "https://github.com/Franco-Ezequiel-Marchegiani/country-quiz",
         features: [
-            "Gráficos interactivos en tiempo real",
-            "Filtros avanzados por fecha y categoría",
-            "Exportación a PDF y Excel",
-            "Responsive design",
-            "Modo oscuro/claro"
+            "Modo multilenguaje: español e inglés",
+            "Dos modalidades de juego: capitales y banderas",
+            "Banderas obtenidas dinámicamente desde una API",
+            "Sistema de eliminación al primer error",
+            "Interfaz atractiva y simple de usar"
         ],
-        image: "https://images.pexels.com/photos/590020/pexels-photo-590020.jpeg?auto=compress&cs=tinysrgb&w=800"
+        image: "https://mir-s3-cdn-cf.behance.net/project_modules/fs/fe1f16110674751.5ff36e458be5f.png",
+        link: "https://quiz-app-game-c940b.web.app/"
         },
         {
-        title: "API REST - E-commerce",
-        description: "Backend completo para tienda online con autenticación y pagos",
-        longDescription: "API REST robusta para e-commerce con sistema de autenticación JWT, integración de pagos, gestión de inventario y panel administrativo.",
-        technologies: ["Node.js", "Express", "MongoDB", "JWT", "Stripe"],
+        title: "Netflix Clone",
+        description: "Simulación de la plataforma Netflix con catálogo dinámico y trailers de películas y series.",
+        longDescription: "Inspirado en la interfaz de Netflix, este proyecto replica una plataforma de streaming donde los usuarios pueden explorar un catálogo de películas y series actualizado en tiempo real mediante la API oficial de Netflix. Incluye la visualización de trailers directamente desde la aplicación. El código está optimizado para ser reutilizable y ligero, asegurando una excelente experiencia de usuario.",
+        technologies: ["React", "API REST", "CSS", "JavaScript"],
         category: "web",
+            
+        github: "https://github.com/Franco-Ezequiel-Marchegiani/netflix-clone",
         features: [
-            "Autenticación JWT segura",
-            "Integración con Stripe",
-            "Gestión de inventario",
-            "Panel administrativo",
-            "Documentación con Swagger"
+            "Catálogo dinámico de películas y series",
+            "Visualización de trailers integrados",
+            "Actualización en tiempo real desde la API de Netflix",
+            "Interfaz 100% responsive",
+            "Código modular y reutilizable"
         ],
-        image: "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800"
+        image: "https://cxl.com/wp-content/uploads/2021/08/netflix-video-trailer-thumbnail.jpg",
+        link: ""
         }
     ];
 
@@ -118,7 +152,7 @@ export const Projects: React.FC = () => {
         { id: 'all', label: 'Todos', icon: <Code className="h-4 w-4" /> },
         { id: 'web', label: 'Web Apps', icon: <Smartphone className="h-4 w-4" /> },
         { id: 'automation', label: 'Automatización', icon: <Database className="h-4 w-4" /> },
-        { id: 'education', label: 'Educación', icon: <Code className="h-4 w-4" /> },
+        /* { id: 'education', label: 'Educación', icon: <Code className="h-4 w-4" /> }, */
         { id: 'games', label: 'Juegos', icon: <Gamepad2 className="h-4 w-4" /> },
     ];
 
@@ -175,17 +209,20 @@ export const Projects: React.FC = () => {
                 >
                 {/* Project Image */}
                 <div className="relative h-48 bg-gradient-to-br from-blue-400 to-green-500 overflow-hidden">
-                    <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover opacity-80"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                    <div className="absolute top-4 right-4">
-                    <span className="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium">
-                        {categories.find(cat => cat.id === project.category)?.label}
-                    </span>
-                    </div>
+                    <a href={project.link} target="_blank" rel="noopener noreferrer">
+                        <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover opacity-80"
+                        />
+                        
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                            <div className="absolute top-4 right-4">
+                                <span className="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium">
+                                    {categories.find(cat => cat.id === project.category)?.label}
+                                </span>
+                        </div>
+                    </a>
                 </div>
 
                 <div className="p-6">

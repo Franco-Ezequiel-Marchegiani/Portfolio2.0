@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Github, ExternalLink, Code, Database, Smartphone, ChevronDown, ChevronUp, Gamepad2, Plus } from 'lucide-react';
-
+// import { Project } from "../types/Project";
 interface Project {
     title: string;
     description: string;
@@ -134,7 +134,7 @@ export const Projects: React.FC = () => {
         longDescription: "Inspirado en la interfaz de Netflix, este proyecto replica una plataforma de streaming donde los usuarios pueden explorar un catálogo de películas y series actualizado en tiempo real mediante la API oficial de Netflix. Incluye la visualización de trailers directamente desde la aplicación. El código está optimizado para ser reutilizable y ligero, asegurando una excelente experiencia de usuario.",
         technologies: ["React", "API REST", "CSS", "JavaScript"],
         category: "web",
-            
+
         github: "https://github.com/Franco-Ezequiel-Marchegiani/netflix-clone",
         features: [
             "Catálogo dinámico de películas y series",

@@ -1,0 +1,124 @@
+[
+    {
+        "title": "Automation & ETL Processes",
+        "description": "Development of scraping and ETL pipelines for real-time data collection, transformation, and visualization.",
+        "longDescription": "Project focused on automating repetitive tasks and managing data efficiently. Implemented full scraping processes with Selenium to extract information from external sources, and ETL pipelines in Python with Pandas to clean, transform, and adapt data. Results were stored in databases and displayed in dynamic reports, optimizing access to key information. The entire flow was versioned and maintained in GitHub, ensuring scalability and clean code.",
+        "technologies": ["Python", "Selenium", "Pandas", "GitHub"],
+        "category": "automation",
+        "github": "https://github.com/Franco-Ezequiel-Marchegiani",
+        "features": [
+            "Data scraping from multiple external sources",
+            "ETL processes for cleaning, transformation and loading",
+            "Automation of repetitive tasks",
+            "Data visualization and dynamic reports",
+            "Version control and collaboration with GitHub"
+        ],
+        "image": "https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "link": "https://github.com/Franco-Ezequiel-Marchegiani"
+    },
+    {
+        "title": "Social Network - Twitter/X Clone",
+        "description": "Interactive web app that recreates a modern social network experience with posts, likes, retweets, and a following system.",
+        "longDescription": "Built with Next.js, this project simulates a social network inspired by Twitter/X. Users can register, log in, post content, like, retweet, and follow others. Designed as a showcase of fullstack skills, the platform combines secure authentication with engaging social features, offering a smooth and dynamic experience.",
+        "technologies": ["React", "Next.js", "Strapi", "PostgreSQL", "Git & GitHub"],
+        "category": "web",
+        "github": "https://github.com/Franco-Ezequiel-Marchegiani/NEXT-JS_DH",
+        "features": [
+            "User authentication with sign up and login",
+            "Create and interact with posts",
+            "Likes and retweets for engagement",
+            "Follow/unfollow system to build a community",
+            "Smooth navigation and intuitive UI"
+        ],
+        "image": "https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=800",
+        "link": "https://github.com/Franco-Ezequiel-Marchegiani/NEXT-JS_DH"
+    },
+    {
+        "title": "Weather App",
+        "description": "Web app to check weather forecasts worldwide, featuring a responsive design and dark mode.",
+        "longDescription": "Developed with React, this app allows users to check weekly weather forecasts in any location supported by the public API. Data updates in real time, offering global coverage. The UI is modern, interactive, fully responsive, and includes a dark mode for a better user experience.",
+        "technologies": ["React", "JavaScript", "API REST", "TypeScript", "Git & GitHub"],
+        "category": "web",
+        "github": "https://github.com/Franco-Ezequiel-Marchegiani/challenge-weatherReport",
+        "features": [
+            "Weekly forecasts for any location worldwide",
+            "Real-time data updates",
+            "Responsive design for all devices",
+            "Dark mode support",
+            "User-friendly interface"
+        ],
+        "image": "https://cdn.dribbble.com/userupload/8911520/file/original-3b56224a185decf93892aabb386cb2c6.jpg",
+        "link": "https://github.com/Franco-Ezequiel-Marchegiani/challenge-weatherReport"
+    },
+    {
+        "title": "GitHub Jobs",
+        "description": "Job portal web app for browsing tech job offers with a minimalist and responsive design.",
+        "longDescription": "This app simulates a job board where users can browse technology job listings. Job details (company, description, salary range, etc.) are dynamically fetched from external APIs. The design is clean and responsive, allowing smooth navigation without distractions.",
+        "technologies": ["React", "JavaScript", "API REST", "TypeScript", "Git & GitHub"],
+        "category": "web",
+        "demo": "https://github-jobs-proyect.firebaseapp.com/",
+        "github": "https://github.com/Franco-Ezequiel-Marchegiani/github_jobs_challenge",
+        "features": [
+            "Browse tech job listings",
+            "Dynamic data from external APIs",
+            "Minimalist, responsive UI",
+            "Simple search and filtering",
+            "Optimized user experience"
+        ],
+        "image": "https://mir-s3-cdn-cf.behance.net/project_modules/1400/431733108909275.5fc7e8d90f04d.png",
+        "link": "https://github-jobs-proyect.firebaseapp.com/"
+    },
+    {
+        "title": "Python Game - Dragon Ball TCG",
+        "description": "1v1 trading card game inspired by Dragon Ball Z, built entirely in Python with Pygame.",
+        "longDescription": "Complete recreation of a trading card game themed around Dragon Ball Z. Developed in Python with Pygame, it features turn-based mechanics, scoring systems, stats, and bonuses. Includes time-limited matches, pause/resume options, and a ranking leaderboard for replayability.",
+        "technologies": ["Python", "Pygame", "JSON", "Git & GitHub"],
+        "category": "games",
+        "demo": "https://www.youtube.com/watch?v=Vvgqh8Vshlg&ab_channel=PejeGZ",
+        "github": "https://github.com/Franco-Ezequiel-Marchegiani/TPFinal_Div315_Marchegiani_Franco?tab=readme-ov-file",
+        "features": [
+            "Turn-based trading card mechanics",
+            "Scoring system and ranking leaderboard",
+            "Time-limited matches with pause option",
+            "Stats and bonuses implemented in Python",
+            "Replayability with dynamic challenges"
+        ],
+        "image": "https://i.ytimg.com/vi/Hdt4sbNc1NA/hqdefault.jpg",
+        "link": "https://www.youtube.com/watch?v=Vvgqh8Vshlg&ab_channel=PejeGZ"
+    },
+    {
+        "title": "Quiz App",
+        "description": "Interactive trivia game with support for two languages and categories: capitals and flags.",
+        "longDescription": "Trivia-style web app built with React where users can choose the language (Spanish/English) and gameplay mode. In 'Capitals', they guess which country corresponds to a random capital. In 'Flags', they identify the country from a flag fetched from a public API. The game ends at the first mistake, encouraging replayability.",
+        "technologies": ["React", "API REST", "JavaScript", "CSS"],
+        "category": "games",
+        "demo": "https://quiz-app-game-c940b.web.app/",
+        "github": "https://github.com/Franco-Ezequiel-Marchegiani/country-quiz",
+        "features": [
+            "Multilanguage: Spanish & English",
+            "Two game modes: capitals and flags",
+            "Flags fetched dynamically from an API",
+            "Elimination system (first mistake ends the game)",
+            "Simple and engaging UI"
+        ],
+        "image": "https://mir-s3-cdn-cf.behance.net/project_modules/fs/fe1f16110674751.5ff36e458be5f.png",
+        "link": "https://quiz-app-game-c940b.web.app/"
+    },
+    {
+        "title": "Netflix Clone",
+        "description": "Netflix-inspired streaming app with dynamic catalog and trailers.",
+        "longDescription": "Inspired by Netflix's interface, this project replicates a streaming platform where users can explore an up-to-date catalog of movies and series from the official Netflix API. It includes embedded trailer playback. The codebase is modular and lightweight, ensuring smooth navigation and a great user experience.",
+        "technologies": ["React", "API REST", "CSS", "JavaScript"],
+        "category": "web",
+        "github": "https://github.com/Franco-Ezequiel-Marchegiani/netflix-clone",
+        "features": [
+            "Dynamic catalog of movies and series",
+            "Integrated trailer playback",
+            "Real-time updates from Netflix API",
+            "Fully responsive design",
+            "Lightweight and modular code"
+        ],
+        "image": "https://cxl.com/wp-content/uploads/2021/08/netflix-video-trailer-thumbnail.jpg",
+        "link": ""
+    }
+]

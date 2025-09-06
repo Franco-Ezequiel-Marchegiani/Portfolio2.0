@@ -10,3 +10,7 @@ export interface Project {
     image: string;
     link: string;
 }
+export type Category = {
+    id: string; 
+    label: string; 
+    icon?: string };

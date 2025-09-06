@@ -1,0 +1,235 @@
+{
+    "about": {
+        "title": "About Me",
+        "summary": {
+        "p1": "I am a Fullstack Developer focused on creating scalable, efficient solutions aligned with business needs. I specialize in integrating back-end logic with clear and functional interfaces.",
+        "p2": "I work with attention to detail and fluent communication, adapting to different technologies and contexts.",
+        "p3": "I enjoy teaching and sharing knowledge, as well as solving complex problems, automating processes, and building products that create real impact. My experience ranges from developing complete web applications to automating business processes and mentoring new developers."
+        },
+        "buttons": {
+        "showMore": "Read more",
+        "showLess": "Show less"
+        },
+        "highlights": [
+        {
+            "title": "Results-Oriented",
+            "description": "I build scalable and efficient solutions aligned with business requirements"
+        },
+        {
+            "title": "Full Integration",
+            "description": "Specialized in integrating back-end logic with clear and functional interfaces"
+        },
+        {
+            "title": "Passion for Teaching",
+            "description": "I enjoy sharing knowledge and solving complex problems"
+        }
+        ]
+    },
+    "certifications": {
+        "title": "Certifications",
+        "items": [
+        {
+            "title": "Professional Competency English B2",
+            "issuer": "British Institute",
+            "type": "Language"
+        },
+        {
+            "title": "Certified Tutor",
+            "issuer": "Coderhouse",
+            "type": "Education"
+        }
+        ]
+    },
+    "contactForm": {
+        "title": "Send me a message",
+        "alreadySent": {
+        "title": "You already sent a message. You can send another in {{time}}.",
+        "text": "Thank you for reaching out. I will reply soon."
+        },
+        "success": {
+        "title": "Message sent!",
+        "text": "Thank you for contacting me. I will reply soon."
+        },
+        "fields": {
+        "name": "Full name",
+        "email": "Email",
+        "subject": "Subject",
+        "message": "Message"
+        },
+        "placeholders": {
+        "name": "Your name",
+        "email": "your@email.com",
+        "message": "Tell me about your project or inquiry..."
+        },
+        "options": {
+        "default": "Select a subject",
+        "job": "Job opportunity",
+        "freelance": "Freelance project",
+        "collaboration": "Collaboration",
+        "general": "General inquiry"
+        },
+        "buttons": {
+        "send": "Send message",
+        "sending": "Sending..."
+        }
+    },
+    "contact": {
+        "title": "Let's Talk About Your Project",
+        "subtitle": "I am available for new opportunities and collaborations. Feel free to contact me!",
+        "infoTitle": "Contact Information",
+        "status": {
+        "title": "Available for new projects",
+        "text": "Currently open to freelance opportunities and full-time positions. Typical response time: 1–12 hours."
+        },
+        "info": [
+        { "label": "Phone" },
+        { "label": "Email" },
+        { "label": "Location" },
+        { "label": "WhatsApp" }
+        ]
+    },
+    "projects": {
+        "title": "Featured",
+        "title2": "Projects",
+        "subtitle": "A selection of projects that demonstrate my technical skills and problem-solving abilities",
+        "cta": {
+        "showMore": "View all projects",
+        "showLess": "View fewer projects",
+        "details": "View details",
+        "lessDetails": "Less details",
+        "noProjects": "No projects available in this category at the moment.",
+        "callToAction": "Interested in a project or have a proposal?",
+        "contactButton": "Let's talk"
+        },
+        "categories": [
+        { "id": "all", "label": "All", "icon": "code"},
+        { "id": "web", "label": "Web Apps", "icon": "smartphone"},
+        { "id": "automation", "label": "Automation", "icon": "database"},
+        { "id": "games", "label": "Games", "icon": "gamepad2" }
+        ],
+        "items": [
+        {
+            "title": "Automation and ETL Processes",
+            "description": "Development of scraping and ETL processes for real-time data collection, transformation, and visualization.",
+            "longDescription": "Project focused on automating repetitive tasks and data management. I implemented complete scraping processes using Selenium to extract data from external sources, and ETL pipelines developed in Python with Pandas to clean, transform, and adapt the data. Results were stored in databases and displayed in dynamic reports, optimizing access to key information. The entire workflow was versioned and controlled on GitHub, ensuring scalability and maintainability.",
+            "technologies": ["Python", "Selenium", "Pandas", "GitHub"],
+            "category": "automation",
+            "github": "https://github.com/Franco-Ezequiel-Marchegiani",
+            "features": [
+            "Data scraping from multiple external sources",
+            "ETL processes for cleaning, transforming, and loading data",
+            "Automation of repetitive tasks",
+            "Data visualization and dynamic reporting",
+            "Version control and collaboration with GitHub"
+            ],
+            "image": "https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=800",
+            "link": "https://github.com/Franco-Ezequiel-Marchegiani"
+        },
+        {
+            "title": "Social Network - Twitter/X Simulation",
+            "description": "Interactive web app recreating the experience of a modern social network, with posts, likes, retweets, and followers system.",
+            "longDescription": "Project built with Next.js simulating a social network like Twitter/X. The platform provides a smooth and dynamic user experience, allowing registration or login, posting content, liking, retweeting, and following other users. Designed as a practical environment to showcase fullstack development skills, combining secure authentication with engaging social features.",
+            "technologies": ["React", "Next.JS", "Strapi", "PostgreSQL", "Git & Github"],
+            "category": "web",
+            "github": "https://github.com/Franco-Ezequiel-Marchegiani/NEXT-JS_DH",
+            "features": [
+            "Authentication with registration and login",
+            "Content creation and interaction",
+            "Likes and retweets to encourage engagement",
+            "User following to build community",
+            "Intuitive interface and smooth navigation"
+            ],
+            "image": "https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=800",
+            "link": "https://github.com/Franco-Ezequiel-Marchegiani/NEXT-JS_DH"
+        },
+        {
+            "title": "Weather App",
+            "description": "Web application to check weather anywhere in the world, with responsive design and dark mode.",
+            "longDescription": "Built with React, this app lets users check weekly weather conditions in any region available through the public API used. Information updates in real time, providing accurate data for multiple countries and cities. The design is modern, interactive, and fully responsive, including a dark mode to enhance user experience.",
+            "technologies": ["React", "Javascript", "API REST", "TypeScript", "Git & Github"],
+            "category": "web",
+            "github": "https://github.com/Franco-Ezequiel-Marchegiani/challenge-weatherReport",
+            "features": [
+            "Weekly forecast anywhere in the world",
+            "Real-time data updates",
+            "Responsive design optimized for all devices",
+            "Dark mode for personalized experience",
+            "Intuitive and attractive interface"
+            ],
+            "image": "https://cdn.dribbble.com/userupload/8911520/file/original-3b56224a185decf93892aabb386cb2c6.jpg",
+            "link": "https://github.com/Franco-Ezequiel-Marchegiani/challenge-weatherReport"
+        },
+        {
+            "title": "GitHub Jobs",
+            "description": "Web portal to browse tech job offers with minimalist design and smooth navigation.",
+            "longDescription": "This site simulates a job board where users can explore tech job opportunities. Job data (company, description, salary range, etc.) is dynamically fetched from third-party APIs. The interface is 100% responsive with a minimalist design for distraction-free browsing.",
+            "technologies": ["React", "Javascript", "API REST", "TypeScript", "Git & Github"],
+            "category": "web",
+            "demo": "https://github-jobs-proyect.firebaseapp.com/",
+            "github": "https://github.com/Franco-Ezequiel-Marchegiani/github_jobs_challenge",
+            "features": [
+            "Browse technology job offers",
+            "Dynamic data retrieval from external APIs",
+            "Minimalist and responsive design",
+            "Simple job search and filtering",
+            "Optimized user experience"
+            ],
+            "image": "https://mir-s3-cdn-cf.behance.net/project_modules/1400/431733108909275.5fc7e8d90f04d.png",
+            "link": "https://github-jobs-proyect.firebaseapp.com/"
+        },
+        {
+            "title": "Python Game - Dragon Ball TCG (Trading Card Game)",
+            "description": "Implementation of the classic Snake game developed in Python with a graphical interface.",
+            "longDescription": "Full recreation of the Snake game using Python and Pygame. Includes scoring system, difficulty levels, sound effects, and personal record saving.",
+            "technologies": ["Python", "Pygame", "JSON", "Git & Github"],
+            "category": "games",
+            "demo": "https://www.youtube.com/watch?v=Vvgqh8Vshlg&ab_channel=PejeGZ",
+            "github": "https://github.com/Franco-Ezequiel-Marchegiani/TPFinal_Div315_Marchegiani_Franco?tab=readme-ov-file",
+            "features": [
+            "Classic Snake mechanics",
+            "Scoring and records system",
+            "Multiple difficulty levels",
+            "Sound and visual effects",
+            "Configuration saving"
+            ],
+            "image": "https://i.ytimg.com/vi/Hdt4sbNc1NA/hqdefault.jpg",
+            "link": "https://www.youtube.com/watch?v=Vvgqh8Vshlg&ab_channel=PejeGZ"
+        },
+        {
+            "title": "Quiz App",
+            "description": "Interactive quiz game in two languages, with capitals and flags modes.",
+            "longDescription": "A trivia-style app built with React, where the user can select language (Spanish or English) and game mode. In 'Capitals', the player must guess the country for a random capital. In 'Flags', dynamically fetched flags from a public API are shown, and the user must guess their country of origin. The game ends at the first wrong answer, encouraging challenge and replayability.",
+            "technologies": ["React", "API REST", "JavaScript", "CSS"],
+            "category": "games",
+            "demo": "https://quiz-app-game-c940b.web.app/",
+            "github": "https://github.com/Franco-Ezequiel-Marchegiani/country-quiz",
+            "features": [
+            "Multilanguage mode: Spanish and English",
+            "Two game modes: capitals and flags",
+            "Flags dynamically retrieved from an API",
+            "Elimination on first error",
+            "Attractive and simple interface"
+            ],
+            "image": "https://mir-s3-cdn-cf.behance.net/project_modules/fs/fe1f16110674751.5ff36e458be5f.png",
+            "link": "https://quiz-app-game-c940b.web.app/"
+        },
+        {
+            "title": "Netflix Clone",
+            "description": "Simulation of the Netflix platform with dynamic catalog and trailers.",
+            "longDescription": "Inspired by Netflix's interface, this project replicates a streaming platform where users can browse a catalog of movies and series updated in real time via the Netflix API. Includes trailer viewing directly in the app. Code is optimized for reusability and lightweight performance, ensuring a great user experience.",
+            "technologies": ["React", "API REST", "CSS", "JavaScript"],
+            "category": "web",
+            "github": "https://github.com/Franco-Ezequiel-Marchegiani/netflix-clone",
+            "features": [
+            "Dynamic catalog of movies and series",
+            "Integrated trailer playback",
+            "Real-time updates from Netflix API",
+            "100% responsive interface",
+            "Reusable and modular code"
+            ],
+            "image": "https://cxl.com/wp-content/uploads/2021/08/netflix-video-trailer-thumbnail.jpg",
+            "link": ""
+        }
+        ]
+    }
+}

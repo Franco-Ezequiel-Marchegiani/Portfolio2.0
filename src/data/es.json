@@ -324,6 +324,49 @@
             "link": ""
         }
         ]
+    },
+    "footer": {
+        "brand": {
+            "initials": "FM",
+            "name": "Franco Marchegiani",
+            "role": "Fullstack Developer",
+            "description": "Desarrollador Fullstack especializado en crear soluciones escalables y eficientes. Siempre enfocado en generar valor real a través de la tecnología."
+        },
+        "titles": {
+            "quickLinks": "Enlaces Rápidos",
+            "contact": "Contacto"
+        },
+        "social": [
+            { "icon": "github", "href": "https://github.com/Franco-Ezequiel-Marchegiani", "label": "GitHub" },
+            { "icon": "linkedin", "href": "https://www.linkedin.com/in/franco-e-marchegiani/", "label": "LinkedIn" },
+            { "icon": "cv", "href": "https://www.canva.com/design/DAGOsU3CpG4/rYxB7omo1UDvwW4rFvQX3Q/view?utm_content=DAGOsU3CpG4&utm_campaign=designshare&utm_medium=link&utm_source=editor", "label": "Cv" },
+            { "icon": "email", "href": "mailto:francoezequielmarchegiani2019@gmail.com", "label": "Email" }
+        ],
+        "quickLinks": [
+            { "name": "Inicio", "href": "#home" },
+            { "name": "Sobre Mí", "href": "#about" },
+            { "name": "Experiencia", "href": "#experience" },
+            { "name": "Habilidades", "href": "#skills" },
+            { "name": "Proyectos", "href": "#projects" },
+            { "name": "Contacto", "href": "#contact" }
+        ],
+        "contact": {
+            "emailLabel": "Email",
+            "email": "francoezequielmarchegiani2019@gmail.com",
+            "phoneLabel": "Teléfono",
+            "phone": "+54 9 11 5961-0005",
+            "locationLabel": "Ubicación",
+            "location": "CABA, Buenos Aires - Argentina",
+            "whatsapp": "Whatsapp",
+            "locationHref": "https://www.google.com.ar/maps/place/Villa+Urquiza,+Cdad.+Aut%C3%B3noma+de+Buenos+Aires",
+            "whatsappHref": "https://api.whatsapp.com/send/?phone=541159610005&text=¡Hola Franco! Me interesa contactarte sobre una oportunidad laboral."
+        },
+        "bottom": {
+            "madeWith": "Hecho con",
+            "using": "usando React y Tailwind CSS",
+            "copyright": "Todos los derechos reservados.",
+            "authorLinkLabel": "Franco Marchegiani"
+        }
     }
 }
 

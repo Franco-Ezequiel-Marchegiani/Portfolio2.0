@@ -103,49 +103,77 @@
     "contactForm": {
         "title": "Envíame un mensaje",
         "alreadySent": {
-        "title": "Ya enviaste un mensaje. Podrás volver a enviar en {{time}}.",
-        "text": "Gracias por contactarme. Te responderé pronto."
+            "title": "Ya enviaste un mensaje. Podrás volver a enviar en",
+            "text": "Gracias por contactarme. Te responderé pronto."
         },
         "success": {
-        "title": "¡Mensaje enviado!",
-        "text": "Gracias por contactarme. Te responderé pronto."
+            "title": "¡Mensaje enviado!",
+            "text": "Gracias por contactarme. Te responderé pronto."
         },
         "fields": {
-        "name": "Nombre completo",
-        "email": "Email",
-        "subject": "Asunto",
-        "message": "Mensaje"
+            "name": "Nombre completo",
+            "email": "Email",
+            "subject": "Asunto",
+            "message": "Mensaje"
         },
         "placeholders": {
-        "name": "Tu nombre",
-        "email": "tu@email.com",
-        "message": "Cuéntame sobre tu proyecto o consulta..."
+            "name": "Tu nombre",
+            "email": "tu@email.com",
+            "message": "Cuéntame sobre tu proyecto o consulta..."
         },
         "options": {
-        "default": "Selecciona un asunto",
-        "job": "Oportunidad laboral",
-        "freelance": "Proyecto freelance",
-        "collaboration": "Colaboración",
-        "general": "Consulta general"
+            "default": "Selecciona un asunto",
+            "job": "Oportunidad laboral",
+            "freelance": "Proyecto freelance",
+            "collaboration": "Colaboración",
+            "general": "Consulta general"
         },
         "buttons": {
-        "send": "Enviar mensaje",
-        "sending": "Enviando..."
+            "send": "Enviar mensaje",
+            "sending": "Enviando..."
         }
     },
     "contact": {
-        "title": "¿Hablamos sobre tu Proyecto?",
-        "subtitle": "Estoy disponible para nuevas oportunidades y colaboraciones. ¡No dudes en contactarme!",
+        "title": "¿Hablamos sobre tu ",
+        "title2": "Proyecto",
+        "title3": "?",
+        "subtitle": "Estoy disponible para nuevas oportunidades y colaboraciones.",
+        "subtitle2": "¡No dudes en contactarme!",
         "infoTitle": "Información de Contacto",
         "status": {
-        "title": "Disponible para nuevos proyectos",
-        "text": "Actualmente estoy disponible para oportunidades freelance y posiciones full-time. Tiempo de respuesta típico: 1-12 horas."
+            "title": "Disponible para nuevos proyectos",
+            "text": "Actualmente estoy disponible para oportunidades freelance y posiciones full-time.",
+            "text2": "Actualmente estoy disponible para oportunidades freelance y posiciones full-time."
         },
         "info": [
-        { "label": "Teléfono" },
-        { "label": "Email" },
-        { "label": "Ubicación" },
-        { "label": "WhatsApp" }
+            {
+            "icon": "phone",
+            "label": "Teléfono",
+            "value": "+54 9 11 5961-0005",
+            "href": "tel:+541159610005",
+            "color": "blue"
+            },
+            {
+            "icon": "mail",
+            "label": "Email",
+            "value": "francoezequielmarchegiani2019@gmail.com",
+            "href": "mailto:francoezequielmarchegiani2019@gmail.com",
+            "color": "green"
+            },
+            {
+            "icon": "mapPin",
+            "label": "Ubicación",
+            "value": "CABA, Buenos Aires - Argentina",
+            "href": "https://www.google.com.ar/maps/place/Villa+Urquiza,+Cdad.+Aut%C3%B3noma+de+Buenos+Aires",
+            "color": "orange"
+            },
+            {
+            "icon": "messageCircle",
+            "label": "WhatsApp",
+            "value": "Contacto directo",
+            "href": "https://api.whatsapp.com/send/?phone=541159610005&text=¡Hola Franco! Me interesa contactarte sobre una oportunidad laboral.",
+            "color": "green"
+            }
         ]
     },
     "projects": {

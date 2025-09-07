@@ -103,49 +103,76 @@
     "contactForm": {
         "title": "Send me a message",
         "alreadySent": {
-        "title": "You already sent a message. You can send another in {{time}}.",
-        "text": "Thank you for reaching out. I will reply soon."
+            "title": "You already sent a message. You can send another in ",
+            "text": "Thank you for reaching out. I will reply soon."
         },
         "success": {
-        "title": "Message sent!",
-        "text": "Thank you for contacting me. I will reply soon."
+            "title": "Message sent!",
+            "text": "Thank you for contacting me. I will reply soon."
         },
         "fields": {
-        "name": "Full name",
-        "email": "Email",
-        "subject": "Subject",
-        "message": "Message"
+            "name": "Full name",
+            "email": "Email",
+            "subject": "Subject",
+            "message": "Message"
         },
         "placeholders": {
-        "name": "Your name",
-        "email": "your@email.com",
-        "message": "Tell me about your project or inquiry..."
+            "name": "Your name",
+            "email": "your@email.com",
+            "message": "Tell me about your project or inquiry..."
         },
         "options": {
-        "default": "Select a subject",
-        "job": "Job opportunity",
-        "freelance": "Freelance project",
-        "collaboration": "Collaboration",
-        "general": "General inquiry"
+            "default": "Select a subject",
+            "job": "Job opportunity",
+            "freelance": "Freelance project",
+            "collaboration": "Collaboration",
+            "general": "General inquiry"
         },
         "buttons": {
-        "send": "Send message",
-        "sending": "Sending..."
+            "send": "Send message",
+            "sending": "Sending..."
         }
     },
     "contact": {
-        "title": "Let's Talk About Your Project",
-        "subtitle": "I am available for new opportunities and collaborations. Feel free to contact me!",
+        "title": "Let's Talk About Your ",
+        "title2": "Project",
+        "subtitle": "I am available for new opportunities and collaborations.",
+        "subtitle2": " Feel free to contact me!",
         "infoTitle": "Contact Information",
         "status": {
-        "title": "Available for new projects",
-        "text": "Currently open to freelance opportunities and full-time positions. Typical response time: 1–12 hours."
+            "title": "Available for new projects",
+            "text": "Currently open to freelance opportunities and full-time positions.",
+            "text2": "Typical response time: 1–12 hours."
         },
         "info": [
-        { "label": "Phone" },
-        { "label": "Email" },
-        { "label": "Location" },
-        { "label": "WhatsApp" }
+            {
+            "icon": "phone",
+            "label": "Phone",
+            "value": "+54 9 11 5961-0005",
+            "href": "tel:+541159610005",
+            "color": "blue"
+            },
+            {
+            "icon": "mail",
+            "label": "Email",
+            "value": "francoezequielmarchegiani2019@gmail.com",
+            "href": "mailto:francoezequielmarchegiani2019@gmail.com",
+            "color": "green"
+            },
+            {
+            "icon": "mapPin",
+            "label": "Location",
+            "value": "Buenos Aires - Argentina",
+            "href": "https://www.google.com.ar/maps/place/Villa+Urquiza,+Cdad.+Aut%C3%B3noma+de+Buenos+Aires",
+            "color": "orange"
+            },
+            {
+            "icon": "messageCircle",
+            "label": "WhatsApp",
+            "value": "Direct contact",
+            "href": "https://api.whatsapp.com/send/?phone=541159610005&text=Hi Franco! I’d like to get in touch regarding a job opportunity.",
+            "color": "green"
+            }
         ]
     },
     "projects": {

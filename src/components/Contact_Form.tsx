@@ -1,8 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser'
 import { Send, CheckCircle, TriangleAlert } from 'lucide-react';
+import { useTranslation } from '../hooks/useTranslation';
 
 export const FormEmail: React.FC = () => {
+    const { t } = useTranslation();
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -18,13 +20,11 @@ export const FormEmail: React.FC = () => {
     //Guarda valor en localStorage para evitar multiple spam
     useEffect(() => {
         const lastSent = localStorage.getItem("lastEmailSent");
-        console.log("Valor guardado en localStorage:", lastSent);
 
         if (lastSent) {
             const diff = Date.now() - parseInt(lastSent, 10);
             //Formato mm/ss/hh
             const msLeft = 24 * 60 * 60 * 1000 - diff;
-            console.log("Tiempo transcurrido en ms:", diff);
 
             if (diff < 24 * 60 * 60 * 1000) {
                 setIsSubmitted(true); // ya lo había mandado en las últimas 24h
@@ -107,40 +107,39 @@ export const FormEmail: React.FC = () => {
         }
     };
 
-
-
     return (
             <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-                Envíame un mensaje
+                {t<string>("contactForm.title", "")}
                 </h3>
                 {/* Primero revisa si ya envió un mail, y dsp muestra el form o el msj de enviado */}
                 {timeLeft !== null ?(
                     <div className="text-center py-12">
                         <TriangleAlert className="h-16 w-16 text-yellow-500 mx-auto mb-4" />
                         <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                        Ya enviaste un mensaje. Podrás volver a enviar en {formatTime(timeLeft)}.
+                            {t<string>("contactForm.alreadySent.title", "")}{formatTime(timeLeft)}.
                         </h4>
                         <p className="text-gray-600 dark:text-gray-400">
-                        Gracias por contactarme. Te responderé pronto.
+                        {t<string>("contactForm.alreadySent.text", "")}
                         </p>
                     </div>
                 ) : isSubmitted ?(
                     <div className="text-center py-12">
                         <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-4" />
                         <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                        ¡Mensaje enviado!
+                        {t<string>("contactForm.success.title", "")}
                         </h4>
                         <p className="text-gray-600 dark:text-gray-400">
-                        Gracias por contactarme. Te responderé pronto.
+                        {t<string>("contactForm.success.text", "")}
                         </p>
                     </div>
                 ) : (
-                <form ref={form} onSubmit={sendEmail} className="space-y-6">
+                    <form ref={form} onSubmit={sendEmail} className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-6">
                     <div>
                         <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                        Nombre completo
+                            {t<string>("contactForm.fields.name", "")}
+                            
                         </label>
                         <input
                         type="text"
@@ -153,12 +152,12 @@ export const FormEmail: React.FC = () => {
                                 bg-white dark:bg-gray-700 text-gray-900 dark:text-white
                                 focus:ring-2 focus:ring-blue-500 focus:border-transparent 
                                 transition-all duration-200"
-                        placeholder="Tu nombre"
+                        placeholder={t<string>("contactForm.placeholders.name", "")}
                         />
                     </div>
                     <div>
                         <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                        Email
+                        {t<string>("contactForm.fields.email", "")}
                         </label>
                         <input
                         type="email"
@@ -171,14 +170,15 @@ export const FormEmail: React.FC = () => {
                                 bg-white dark:bg-gray-700 text-gray-900 dark:text-white
                                 focus:ring-2 focus:ring-blue-500 focus:border-transparent 
                                 transition-all duration-200"
-                        placeholder="tu@email.com"
+                        placeholder={t<string>("contactForm.placeholders.email", "")}
                         />
                     </div>
                     </div>
 
                     <div>
                     <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                        Asunto
+                        {t<string>("contactForm.fields.subject", "")}
+                        
                     </label>
                     <select
                         id="subject"
@@ -191,17 +191,17 @@ export const FormEmail: React.FC = () => {
                                 focus:ring-2 focus:ring-blue-500 focus:border-transparent 
                                 transition-all duration-200"
                     >
-                        <option value="">Selecciona un asunto</option>
-                        <option value="Oportunidad laboral">Oportunidad laboral</option>
-                        <option value="Proyecto freelance">Proyecto freelance</option>
-                        <option value="colaboracion">Colaboración</option>
-                        <option value="Consulta general">Consulta general</option>
+                        <option value="">{t<string>("contactForm.options.default", "")}</option>
+                        <option value="Oportunidad laboral">{t<string>("contactForm.options.job", "")}</option>
+                        <option value="Proyecto freelance">{t<string>("contactForm.options.freelance", "")}</option>
+                        <option value="colaboracion">{t<string>("contactForm.options.collaboration", "")}</option>
+                        <option value="Consulta general">{t<string>("contactForm.options.general", "")}</option>
                     </select>
                     </div>
 
                     <div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                        Mensaje
+                        {t<string>("contactForm.fields.message", "")}
                     </label>
                     <textarea
                         id="message"
@@ -214,29 +214,29 @@ export const FormEmail: React.FC = () => {
                                 bg-white dark:bg-gray-700 text-gray-900 dark:text-white
                                 focus:ring-2 focus:ring-blue-500 focus:border-transparent 
                                 transition-all duration-200 resize-vertical"
-                        placeholder="Cuéntame sobre tu proyecto o consulta..."
+                        placeholder={t<string>("contactForm.placeholders.message", "")}
                     />
                     </div>
 
                     <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="w-full flex items-center justify-center space-x-2 px-8 py-4 
-                            bg-gradient-to-r from-blue-600 to-green-500 text-white font-medium 
-                            rounded-lg hover:from-blue-700 hover:to-green-600 
-                            transform hover:scale-105 transition-all duration-200 
-                            shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed
-                            disabled:transform-none"
+                        type="submit"
+                        disabled={isSubmitting}
+                        className="w-full flex items-center justify-center space-x-2 px-8 py-4 
+                                bg-gradient-to-r from-blue-600 to-green-500 text-white font-medium 
+                                rounded-lg hover:from-blue-700 hover:to-green-600 
+                                transform hover:scale-105 transition-all duration-200 
+                                shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed
+                                disabled:transform-none"
                     >
                     {isSubmitting ? (
                         <>
-                        <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                        <span>Enviando...</span>
+                            <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                            <span>{t<string>("contactForm.buttons.sending", "")}</span>
                         </>
                     ) : (
                         <>
-                        <Send className="h-5 w-5" />
-                        <span>Enviar mensaje</span>
+                            <Send className="h-5 w-5" />
+                            <span>{t<string>("contactForm.buttons.send", "")}</span>
                         </>
                     )}
                     </button>

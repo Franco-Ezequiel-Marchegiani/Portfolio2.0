@@ -1,48 +1,18 @@
 import React from 'react';
 import { GraduationCap, Calendar } from 'lucide-react';
 import { Certification } from './Certifications';
+import type { EducationItem } from "../types/Education";
+import { useTranslation } from '../hooks/useTranslation';
 
-interface EducationItem {
-    institution: string;
-    link: string;
-    degree: string;
-    period: string;
-    status: string;
-    description?: string;
-    highlights?: string[];
-}
+const ensureArray = <T,>(value: unknown): T[] => (Array.isArray(value) ? (value as T[]) : []);
 
 export const Education: React.FC = () => {
-    const education: EducationItem[] = [
-        {
-        institution: "UTN",
-        link: "https://fra.utn.edu.ar/tecnicatura-universitaria/",
-        degree: "Tecnicatura Universitaria en Programación",
-        period: "2024 - Actualidad",
-        status: "En curso",
-        description: "Formación técnica universitaria enfocada en programación, desarrollo de software y Analisis de Datos.",
-        highlights: ["Algoritmos y estructuras de datos", "Programación orientada a objetos", "Base de datos", "Python", "POO", "Prob. y Estadísticas", "Análisis de Datos", "Inglés técnico"]
-        },
-        {
-        institution: "Digital House",
-        link: "https://www.digitalhouse.com/ar",
-        degree: "Certified Tech Developer",
-        period: "2023 - 2024",
-        status: "Egresado",
-        description: "Carrera de Professional Web Developer creada en conjunto con Mercado Libre y Globant.",
-        highlights: ["Metodologías ágiles", "React y Next.JS", "Base de Datos SQL y NoSQL", "Arquitectura de software", "DevOps y Cloud", "Proyecto final integrador"]
-        },
-        {
-        institution: "Digital House",
-        link: "https://www.digitalhouse.com/ar",
-        degree: "Fullstack Web Developer",
-        period: "2021 - 2022",
-        status: "Egresado",
-        description: "Formación completa en desarrollo web frontend y backend.",
-        highlights: ["HTML, CSS, JavaScript", "React y Node.js", "Bases de datos SQL y NoSQL", "APIs REST", "Metodologías ágiles"]
-        }
-    ];
-
+    const { t } = useTranslation();
+    // Pedimos fallback [] para evitar undefined / string
+    const rawEducation = t<EducationItem[]>("education.items", []);
+    
+      // Coerción de seguridad (por si t devolvió algo raro)
+    const education = ensureArray<EducationItem>(rawEducation);
 
     return (
         <section id="education" className="py-20 px-4 sm:px-6 lg:px-8">
@@ -50,11 +20,12 @@ export const Education: React.FC = () => {
             <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
                 <span className="bg-gradient-to-r from-blue-600 to-green-500 bg-clip-text text-transparent">
-                Educación
-                </span> y Certificaciones
+                    {t<string>("education.title", "")} {'\n'}
+                </span> 
+                {t<string>("education.title2", "")} {'\n'}
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-400">
-                Mi formación académica y certificaciones profesionales
+                {t<string>("education.subtitle", "")}
             </p>
             </div>
 
@@ -63,7 +34,7 @@ export const Education: React.FC = () => {
             <div>
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 flex items-center">
                     <GraduationCap className="h-6 w-6 mr-3 text-blue-500" />
-                    Formación Académica
+                    {t<string>("education.academicTitle", "")}
                 </h3>
                 
                 <div className="space-y-6">
@@ -110,7 +81,7 @@ export const Education: React.FC = () => {
                         {edu.highlights && (
                             <div className="space-y-2">
                             <p className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                                Materias destacadas:
+                                {t<string>("education.highlightsLabel", "")}
                             </p>
                             <div className="flex flex-wrap gap-2">
                                 {edu.highlights.map((highlight, highlightIndex) => (

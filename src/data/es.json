@@ -25,18 +25,78 @@
         }
         ]
     },
+    "education": {
+        "title": "Educación",
+        "title2": "y Certificaciones",
+        "subtitle": "Mi formación académica y certificaciones profesionales",
+        "academicTitle": "Formación Académica",
+        "highlightsLabel": "Materias destacadas:",
+        "items": [
+        {
+            "institution": "UTN",
+            "link": "https://fra.utn.edu.ar/tecnicatura-universitaria/",
+            "degree": "Tecnicatura Universitaria en Programación",
+            "period": "2024 - Actualidad",
+            "status": "En curso",
+            "description": "Formación técnica universitaria enfocada en programación, desarrollo de software y Análisis de Datos.",
+            "highlights": [
+            "Algoritmos y estructuras de datos",
+            "Programación orientada a objetos",
+            "Base de datos",
+            "Python",
+            "POO",
+            "Prob. y Estadísticas",
+            "Análisis de Datos",
+            "Inglés técnico"
+            ]
+        },
+        {
+            "institution": "Digital House",
+            "link": "https://www.digitalhouse.com/ar",
+            "degree": "Certified Tech Developer",
+            "period": "2023 - 2024",
+            "status": "Egresado",
+            "description": "Carrera de Professional Web Developer creada en conjunto con Mercado Libre y Globant.",
+            "highlights": [
+            "Metodologías ágiles",
+            "React y Next.JS",
+            "Base de Datos SQL y NoSQL",
+            "Arquitectura de software",
+            "DevOps y Cloud",
+            "Proyecto final integrador"
+            ]
+        },
+        {
+            "institution": "Digital House",
+            "link": "https://www.digitalhouse.com/ar",
+            "degree": "Fullstack Web Developer",
+            "period": "2021 - 2022",
+            "status": "Egresado",
+            "description": "Formación completa en desarrollo web frontend y backend.",
+            "highlights": [
+            "HTML, CSS, JavaScript",
+            "React y Node.js",
+            "Bases de datos SQL y NoSQL",
+            "APIs REST",
+            "Metodologías ágiles"
+            ]
+        }
+        ]
+    },
     "certifications": {
         "title": "Certificaciones",
         "items": [
         {
             "title": "Competencia Profesional Inglés B2",
             "issuer": "Liceo Británico",
-            "type": "Idioma"
+            "type": "Idioma",
+            "icon": "award"
         },
         {
             "title": "Tutor Certificado",
             "issuer": "Coderhouse",
-            "type": "Educación"
+            "type": "Educación",
+            "icon": "bookOpen"
         }
         ]
     },

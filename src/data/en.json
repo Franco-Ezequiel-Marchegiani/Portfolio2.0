@@ -25,18 +25,78 @@
         }
         ]
     },
+    "education": {
+        "title": "Education",
+        "title2": "& Certifications",
+        "subtitle": "My academic background and professional certifications",
+        "academicTitle": "Academic Background",
+        "highlightsLabel": "Key Subjects:",
+        "items": [
+            {
+                "institution": "UTN",
+                "link": "https://fra.utn.edu.ar/tecnicatura-universitaria/",
+                "degree": "University Technician in Programming",
+                "period": "2024 - Present",
+                "status": "In progress",
+                "description": "Technical university training focused on programming, software development, and Data Analysis.",
+                "highlights": [
+                "Algorithms and data structures",
+                "Object-oriented programming",
+                "Databases",
+                "Python",
+                "OOP",
+                "Probability & Statistics",
+                "Data Analysis",
+                "Technical English"
+                ]
+            },
+            {
+                "institution": "Digital House",
+                "link": "https://www.digitalhouse.com/ar",
+                "degree": "Certified Tech Developer",
+                "period": "2023 - 2024",
+                "status": "Graduated",
+                "description": "Professional Web Developer career created in partnership with Mercado Libre and Globant.",
+                "highlights": [
+                "Agile methodologies",
+                "React and Next.JS",
+                "SQL & NoSQL Databases",
+                "Software architecture",
+                "DevOps & Cloud",
+                "Final integrative project"
+                ]
+            },
+            {
+                "institution": "Digital House",
+                "link": "https://www.digitalhouse.com/ar",
+                "degree": "Fullstack Web Developer",
+                "period": "2021 - 2022",
+                "status": "Graduated",
+                "description": "Comprehensive training in frontend and backend web development.",
+                "highlights": [
+                "HTML, CSS, JavaScript",
+                "React and Node.js",
+                "SQL & NoSQL Databases",
+                "REST APIs",
+                "Agile methodologies"
+                ]
+            }
+        ]
+    },
     "certifications": {
         "title": "Certifications",
         "items": [
         {
             "title": "Professional Competency English B2",
             "issuer": "British Institute",
-            "type": "Language"
+            "type": "Language",
+            "icon": "award"
         },
         {
             "title": "Certified Tutor",
             "issuer": "Coderhouse",
-            "type": "Education"
+            "type": "Education",
+            "icon": "bookOpen"
         }
         ]
     },

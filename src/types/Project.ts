@@ -13,4 +13,5 @@ export interface Project {
 export type Category = {
     id: string; 
     label: string; 
-    icon?: string };
+    icon?: string 
+};

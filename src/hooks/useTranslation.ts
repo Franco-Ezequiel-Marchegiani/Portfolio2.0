@@ -8,7 +8,7 @@ type Lang = "es" | "en";
 const translations: Record<Lang, unknown> = { es, en };
 
 export const useTranslation = () => {
-  const [lang, setLang] = useState<Lang>("es");
+  const [lang, setLang] = useState<Lang>("en");
 
   // t<T>(path, fallback?) -> devuelve T o fallback
   const t = <T = unknown>(path: string, fallback?: T): T => {

@@ -92,14 +92,19 @@
         "title": "Featured",
         "title2": "Projects",
         "subtitle": "A selection of projects that demonstrate my technical skills and problem-solving abilities",
+        "loadingMsg": "Loading projects...",
+        "msgNotFound": "There are no projects in this category at the moment.",
+        "more": "More",
+        "mainFeatures": "Main features:",
+        "completeTechnology": "Complete Technology Stack:",
         "cta": {
-        "showMore": "View all projects",
-        "showLess": "View fewer projects",
-        "details": "View details",
-        "lessDetails": "Less details",
-        "noProjects": "No projects available in this category at the moment.",
-        "callToAction": "Interested in a project or have a proposal?",
-        "contactButton": "Let's talk"
+            "showMore": "View all projects",
+            "showLess": "View fewer projects",
+            "details": "View details",
+            "lessDetails": "Less details",
+            "noProjects": "No projects available in this category at the moment.",
+            "callToAction": "Interested in a project or have a proposal?",
+            "contactButton": "Let's talk"
         },
         "categories": [
         { "id": "all", "label": "All", "icon": "code"},

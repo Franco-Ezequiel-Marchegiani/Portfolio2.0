@@ -92,14 +92,19 @@
         "title": "Proyectos",
         "title2": "Destacados",
         "subtitle": "Una selección de proyectos que demuestran mis habilidades técnicas y capacidad de resolución de problemas",
+        "loadingMsg": "Cargando proyectos...",
+        "msgNotFound": "No hay proyectos en esta categoría por el momento.",
+        "more": "Más",
+        "mainFeatures": "Características principales:",
+        "completeTechnology": "Tecnologías completas:",
         "cta": {
-        "showMore": "Ver todos los proyectos",
-        "showLess": "Ver menos proyectos",
-        "details": "Ver detalles",
-        "lessDetails": "Menos detalles",
-        "noProjects": "No hay proyectos en esta categoría por el momento.",
-        "callToAction": "¿Te interesa algún proyecto o tienes alguna propuesta?",
-        "contactButton": "Conversemos"
+            "showMore": "Ver todos los proyectos",
+            "showLess": "Ver menos proyectos",
+            "details": "Ver detalles",
+            "lessDetails": "Menos detalles",
+            "noProjects": "No hay proyectos en esta categoría por el momento.",
+            "callToAction": "¿Te interesa algún proyecto o tienes alguna propuesta?",
+            "contactButton": "Conversemos"
         },
         "categories": [
         { "id": "all", "label": "Todos", "icon": "code"},

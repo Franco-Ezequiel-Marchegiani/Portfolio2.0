@@ -1,4 +1,3 @@
-// src/components/Projects.tsx
 import React, { useState, type JSX } from 'react';
 import {
   Github,
@@ -38,12 +37,6 @@ export const Projects: React.FC = () => {
   const projects = ensureArray<Project>(rawProjects);
   const categories = ensureArray<Category>(rawCategories);
 
-  // Debug ligero — descomenta si querés inspeccionar en consola
-    console.log("projects:", projects);
-    console.log("categories:", categories);
-    console.log("t:", t);
-    console.log("t:", t("projects.title"));
-
   const filteredProjects =
     selectedCategory === 'all' ? projects : projects.filter(project => project.category === selectedCategory);
 
@@ -58,7 +51,7 @@ export const Projects: React.FC = () => {
     return (
       <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900/50">
         <div className="max-w-7xl mx-auto text-center py-12">
-          <p className="text-gray-500 dark:text-gray-400">Cargando proyectos...</p>
+          <p className="text-gray-500 dark:text-gray-400">{t<string>("projects.loadingMsg", "")}</p>
         </div>
       </section>
     );
@@ -102,7 +95,7 @@ export const Projects: React.FC = () => {
         <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8 mb-12">
           {displayedProjects.length === 0 ? (
             <div className="text-center col-span-full py-12">
-              <p className="text-gray-500 dark:text-gray-400">No hay proyectos en esta categoría por el momento.</p>
+              <p className="text-gray-500 dark:text-gray-400">{t<string>("projects.msgNotFound", "")}</p>
             </div>
           ) : (
             displayedProjects.map((project, index) => (
@@ -137,7 +130,7 @@ export const Projects: React.FC = () => {
                     ))}
                     {project.technologies.length > 3 && (
                       <span className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 text-xs rounded-full">
-                        +{project.technologies.length - 3} más
+                        +{project.technologies.length - 3} {t<string>("projects.more", "")}
                       </span>
                     )}
                   </div>
@@ -149,7 +142,7 @@ export const Projects: React.FC = () => {
                         <p className="text-gray-600 dark:text-gray-400 text-sm">{project.longDescription}</p>
                       )}
                       <div>
-                        <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Características principales:</h4>
+                        <h4 className="font-semibold text-gray-900 dark:text-white mb-2">{t<string>("projects.mainFeatures", "")}</h4>
                         <ul className="space-y-1">
                           {project.features.map((feature, featureIndex) => (
                             <li key={featureIndex} className="flex items-start space-x-2">
@@ -161,7 +154,7 @@ export const Projects: React.FC = () => {
                       </div>
 
                       <div>
-                        <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Tecnologías completas:</h4>
+                        <h4 className="font-semibold text-gray-900 dark:text-white mb-2">{t<string>("projects.completeTechnology", "")}</h4>
                         <div className="flex flex-wrap gap-1">
                           {project.technologies.map((tech, techIndex) => (
                             <span key={techIndex} className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs rounded">
@@ -189,7 +182,7 @@ export const Projects: React.FC = () => {
                     </div>
 
                     <button onClick={() => toggleProjectExpansion(index)} className="flex items-center space-x-1 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 text-sm font-medium">
-                      <span>{expandedProject === index ? 'Menos detalles' : 'Ver detalles'}</span>
+                      <span>{expandedProject === index ? t<string>("projects.cta.lessDetails", "") : t<string>("projects.cta.details", "")}</span>
                       {expandedProject === index ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
                     </button>
                   </div>
@@ -204,7 +197,7 @@ export const Projects: React.FC = () => {
           <div className="text-center mb-16">
             <button onClick={() => setShowAllProjects(!showAllProjects)} className="flex items-center space-x-2 mx-auto px-8 py-3 bg-white dark:bg-gray-800 border-2 border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 font-medium rounded-lg hover:bg-blue-600 hover:text-white dark:hover:bg-blue-400 dark:hover:text-gray-900 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl">
               <Plus className={`h-5 w-5 transform transition-transform duration-200 ${showAllProjects ? 'rotate-45' : ''}`} />
-              <span>{showAllProjects ? 'Ver menos proyectos' : `Ver todos los proyectos (${filteredProjects.length})`}</span>
+              <span>{showAllProjects ? t<string>("projects.cta.showLess", "") : `${t<string>("projects.cta.showMore", "")} (${filteredProjects.length})`}</span>
             </button>
           </div>
         )}

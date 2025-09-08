@@ -17,77 +17,7 @@ const iconMap: Record<IconKey, JSX.Element> = {
 const ensureArray = <T,>(value: unknown): T[] => (Array.isArray(value) ? (value as T[]) : []);
 export const Skills: React.FC = () => {
     const { t } = useTranslation();
-    /* const skillCategories: SkillCategory[] = [
-        {
-        title: "Frontend",
-        icon: <Palette className="h-6 w-6" />,
-        color: "blue",
-        skills: [
-            { name: "React.JS & Redux-Toolkit", years: 3, description: "Desarrollo avanzado" },
-            { name: "JavaScript & TypeScript", years: 4, description: "Uso diario" },
-            { name: "HTML, CSS & Sass", years: 6, description: "Dominio completo" },
-            { name: "Next.JS", years: 1, description: "Proyectos comerciales" },
-            { name: "Bootstrap & MaterialUI", years: 4, description: "UI frameworks" },
-        ]
-        },
-        {
-        title: "Backend",
-        icon: <Code className="h-6 w-6" />,
-        color: "green",
-        skills: [
-            { name: "Node.js", years: 3, description: "APIs y microservicios" },
-            { name: "Python / Selenium / Pandas", years: 2, description: "Automatización y datos" },
-            { name: "API REST", years: 4, description: "Diseño y desarrollo" },
-            { name: "Microservicios", years: 2, description: "Arquitectura distribuida" },
-        ]
-        },
-        {
-        title: "Base de Datos",
-        icon: <Database className="h-6 w-6" />,
-        color: "orange",
-        skills: [
-            { name: "SQL & Databases", years: 4, description: "Diseño y optimización" },
-            { name: "PostgreSQL", years: 3, description: "Base de datos principal" },
-            { name: "MongoDB", years: 3, description: "NoSQL y agregaciones" },
-            { name: "SQL Server", years: 1, description: "Cache y sesiones" },
-        ]
-        },
-        {
-        title: "Herramientas",
-        icon: <Wrench className="h-6 w-6" />,
-        color: "purple",
-        skills: [
-            { name: "Git - Github", years: 6, description: "Control de versiones" },
-            { name: "Trello, Azure & Notion", years: 4, description: "Gestión de proyectos" },
-            { name: "Docker", years: 1, description: "Containerización" },
-            { name: "AWS", years: 1, description: "Cloud computing" },
-        ]
-        },
-        {
-        title: "Metodologías",
-        icon: <GitBranch className="h-6 w-6" />,
-        color: "indigo",
-        skills: [
-            { name: "SCRUM", years: 4, description: "Metodología ágil" },
-            { name: "Clean Code", years: 5, description: "Buenas prácticas" },
-            { name: "Patrones de Diseño", years: 3, description: "Arquitectura de software" },
-            { name: "TDD", years: 2, description: "Testing automatizado" },
-        ]
-        },
-        {
-        title: "Soft Skills",
-        icon: <Users className="h-6 w-6" />,
-        color: "pink",
-        skills: [
-            { name: "Mentoría", years: 4, description: "300+ estudiantes por mes" },
-            { name: "Trabajo en Equipo", years: 6, description: "Colaboración efectiva" },
-            { name: "Comunicación", years: 6, description: "Cliente y equipo" },
-            { name: "Inglés B2", years: 6, description: "Certificado oficial" },
-        ]
-        }
-    ]; */
     const rawSkillCategories = t<SkillCategory[]>("skills.categories", []);
-
     const skillCategories = ensureArray<SkillCategory>(rawSkillCategories);
 
     const getColorClasses = (color: string) => {

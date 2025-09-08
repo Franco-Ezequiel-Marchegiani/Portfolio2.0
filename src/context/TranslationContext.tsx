@@ -7,13 +7,13 @@ import type { Lang, TranslationObject } from "../types/Translation";
 const translations: Record<Lang, TranslationObject> = { es, en };
 
 interface TranslationContextProps {
-  lang: Lang;
-  setLang: (lang: Lang) => void;
-  t: <T = string>(path: string, fallback?: T) => T;
+    lang: Lang;
+    setLang: (lang: Lang) => void;
+    t: <T = string>(path: string, fallback?: T) => T;
 }
 
 const TranslationContext = createContext<TranslationContextProps | undefined>(
-  undefined
+    undefined
 );
 
 export const TranslationProvider = ({ children }: { children: ReactNode }) => {

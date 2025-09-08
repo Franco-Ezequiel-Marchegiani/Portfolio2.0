@@ -10,7 +10,6 @@ export const useTranslation = () => {
       "useTranslation debe usarse dentro de un <TranslationProvider>"
     );
   }
-
   return context;
 };
 

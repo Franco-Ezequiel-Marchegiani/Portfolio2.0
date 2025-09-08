@@ -53,7 +53,7 @@ export const Education: React.FC = () => {
                                 </a>
                             </h4>
                             <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-                            edu.status === 'En curso'
+                            edu.status === t<string>("education.status_progress", "")
                                 ? 'bg-blue-100 dark:bg-blue-900/20 text-blue-800 dark:text-blue-400'
                                 : 'bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-400'
                             }`}>

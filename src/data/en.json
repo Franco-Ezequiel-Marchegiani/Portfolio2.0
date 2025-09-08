@@ -119,6 +119,8 @@
         "subtitle": "My academic background and professional certifications",
         "academicTitle": "Academic Background",
         "highlightsLabel": "Key Subjects:",
+        "status_progress": "In progress",
+        "status_Graduated": "Graduated",
         "items": [
             {
                 "institution": "UTN",

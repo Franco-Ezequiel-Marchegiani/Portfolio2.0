@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Moon, Sun, Menu, X } from 'lucide-react';
+import { Moon, Sun, Menu, X, Globe } from 'lucide-react';
 import { useTranslation } from '../hooks/useTranslation';
 import type { NavItems } from "../types/Header";
 
@@ -10,12 +10,10 @@ interface HeaderProps {
 const ensureArray = <T,>(value: unknown): T[] => (Array.isArray(value) ? (value as T[]) : []);
 
 export const Header: React.FC<HeaderProps> = ({ darkMode, setDarkMode }) => {
-    const { t } = useTranslation();
+    const { t, lang, setLang } = useTranslation();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
     const rawNavItems = t<NavItems[]>("header.navItems", []);
-
-    const navItems = ensureArray<NavItems>(rawNavItems);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -33,6 +31,8 @@ export const Header: React.FC<HeaderProps> = ({ darkMode, setDarkMode }) => {
         setIsMenuOpen(false);
         }
     };
+        const navItems = ensureArray<NavItems>(rawNavItems);
+
     return (
         <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isScrolled 
@@ -65,19 +65,28 @@ export const Header: React.FC<HeaderProps> = ({ darkMode, setDarkMode }) => {
             {/* Theme Toggle & Mobile Menu */}
             <div className="flex items-center space-x-4">
                 <button
-                onClick={() => setDarkMode(!darkMode)}
-                className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300
-                        hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
-                >
-                {darkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+                    onClick={() => setLang(lang === "es" ? "en" : "es")}
+                    className="flex p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300
+                                hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
+                    >
+                    <Globe className="h-5 w-5" />
+                    <span className="ml-2 text-sm font-medium">{lang.toUpperCase()}</span>
                 </button>
+                <button
+                    onClick={() => setDarkMode(!darkMode)}
+                    className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300
+                            hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
+                    >
+                    {darkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+                </button>
+                
 
                 <button
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="md:hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300
-                        hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
-                >
-                {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+                    onClick={() => setIsMenuOpen(!isMenuOpen)}
+                    className="md:hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300
+                            hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
+                    >
+                    {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
                 </button>
             </div>
             </div>

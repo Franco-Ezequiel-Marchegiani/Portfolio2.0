@@ -119,6 +119,8 @@
         "subtitle": "Mi formación académica y certificaciones profesionales",
         "academicTitle": "Formación Académica",
         "highlightsLabel": "Materias destacadas:",
+        "status_progress": "En curso",
+        "status_Graduated": "Egresado",
         "items": [
         {
             "institution": "UTN",
@@ -308,7 +310,7 @@
         "status": {
             "title": "Disponible para nuevos proyectos",
             "text": "Actualmente estoy disponible para oportunidades freelance y posiciones full-time.",
-            "text2": "Actualmente estoy disponible para oportunidades freelance y posiciones full-time."
+            "text2": "Tiempo de respuesta típico: 1-12 horas."
         },
         "info": [
             {

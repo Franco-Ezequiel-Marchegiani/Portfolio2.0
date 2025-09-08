@@ -8,6 +8,7 @@ import { Projects } from './components/Projects';
 import { Education } from './components/Education';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
+import { TranslationProvider } from './context/TranslationContext';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -30,23 +31,25 @@ function App() {
   }, [darkMode]);
 
   return (
-    <div className={`min-h-screen transition-colors duration-300 ${
-      darkMode 
-        ? 'bg-gradient-to-br from-gray-900 via-blue-900 to-gray-800' 
-        : 'bg-gradient-to-br from-blue-50 via-white to-gray-50'
-    }`}>
-      <Header darkMode={darkMode} setDarkMode={setDarkMode} />
-      <main>
-        <Hero />
-        <About />
-        <Experience />
-        <Skills />
-        <Projects />
-        <Education />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <TranslationProvider>
+      <div className={`min-h-screen transition-colors duration-300 ${
+        darkMode 
+          ? 'bg-gradient-to-br from-gray-900 via-blue-900 to-gray-800' 
+          : 'bg-gradient-to-br from-blue-50 via-white to-gray-50'
+      }`}>
+        <Header darkMode={darkMode} setDarkMode={setDarkMode} />
+        <main>
+          <Hero />
+          <About />
+          <Experience />
+          <Skills />
+          <Projects />
+          <Education />
+          <Contact />
+        </main>
+        <Footer />
+      </div>
+    </TranslationProvider>
   );
 }
 

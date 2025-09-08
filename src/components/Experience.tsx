@@ -1,64 +1,17 @@
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp, Calendar, MapPin, Building } from 'lucide-react';
+import type { ExperienceItem } from "../types/Experience";
+import { useTranslation } from '../hooks/useTranslation';
 
-interface ExperienceItem {
-    company: string;
-    position: string;
-    period: string;
-    location: string;
-    link: string;
-    description: string[];
-    technologies: string[];
-    current?: boolean;
-}
+const ensureArray = <T,>(value: unknown): T[] => (Array.isArray(value) ? (value as T[]) : []);
 
 export const Experience: React.FC = () => {
+    const { t } = useTranslation();
     const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+    
+    const rawExperiences = t<ExperienceItem[]>("experience.items", []);
 
-    const experiences: ExperienceItem[] = [
-        {
-        company: "Plug-zone",
-        position: "Fullstack Developer",
-        period: "Dic 2024 - Abr 2025",
-        location: "Argentina",
-        link: "https://plug-zone.com/",
-        // current: true,
-        description: [
-            "Desarrollo de sitio Web adaptadas a la lógica del negocio.",
-            "Implementación del flujo de carga de archivos con validaciones y feedback visual.",
-            "Aportes en estructura de datos, experiencia de usuario y lógica del sistema.",
-            "Coordinación directa con líder del proyecto y presentación de avances al cliente."
-        ],
-        technologies: ["React", "Node.js", "TypeScript", "PostgreSQL"]
-    },
-    {
-        company: "Disbyte s.a.",
-        position: "Fullstack Developer & Data Developer",
-        period: "Ago 2022 - Ago 2024",
-        location: "Argentina",
-        link: "https://www.disbyte.com/",
-        description: [
-            "Extracción y procesamiento de datos desde APIs (ej. MercadoLibre) y scraping con Python.",
-            "Automatización de procesos internos de diversos sectores de la empresa.",
-            "Creación de sitios web para facilitar, agilizar y automatizar procesos para distintos sectores de la empresa."
-        ],
-        technologies: ["Python", "Selenium", "Pandas", "React", "Node.js", "PostgreSQL", "Postman", "MongoDB", "API REST", "AWS"]
-        },
-        {
-        company: "Coderhouse",
-        position: "Tutor Desarrollo Web & Front End",
-        period: "Jul 2020 - Ago 2023",
-        location: "Argentina",
-        link: "https://www.coderhouse.com/ar/",
-        description: [
-            "Asistencia, corrección de proyectos y clases de apoyo a más de 300 estudiantes por mes.",
-            "Soporte a estudiantes vía Slack y en clases en vivo.",
-            "Brindar clases de apoyo con contenido y resolviendo dudas en vivo de manera sincrónica",
-            "Corrección de proyectos con foco en buenas prácticas y estructura clara."
-        ],
-        technologies: ["HTML", "CSS", "JavaScript", "React", "Git", "Node.js", "Slack", "Metodologías Ágiles"]
-        }
-    ];
+    const experiences = ensureArray<ExperienceItem>(rawExperiences);
 
     const toggleExpansion = (index: number) => {
         setExpandedIndex(expandedIndex === index ? null : index);
@@ -70,11 +23,12 @@ export const Experience: React.FC = () => {
             <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
                 <span className="bg-gradient-to-r from-blue-600 to-green-500 bg-clip-text text-transparent">
-                Experiencia
-                </span> Profesional
+                {t<string>("experience.title", "")} {'\n'}
+                </span> 
+                {t<string>("experience.title2", "")}
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-400">
-                Mi trayectoria profesional en desarrollo y educación tecnológica
+                {t<string>("experience.subtitle", "")}
             </p>
             </div>
 
@@ -98,7 +52,7 @@ export const Experience: React.FC = () => {
                                 {exp.current && (
                                     <span className="px-3 py-1 bg-green-100 dark:bg-green-900/20 text-green-800 
                                         dark:text-green-400 text-sm font-medium rounded-full">
-                                    Actual
+                                    {t<string>("experience.current", "")}
                                     </span>
                                 )}
                             </div>
@@ -142,7 +96,7 @@ export const Experience: React.FC = () => {
                         className="mt-2 text-blue-600 dark:text-blue-400 hover:text-blue-700 
                                 dark:hover:text-blue-300 text-sm font-medium"
                         >
-                        Ver más detalles...
+                        {t<string>("experience.details", "")}
                         </button>
                     )}
                     </div>
@@ -152,7 +106,7 @@ export const Experience: React.FC = () => {
                     <div className="space-y-4 pt-4 border-t border-gray-200 dark:border-gray-700">
                         <div>
                         <h5 className="font-semibold text-gray-900 dark:text-white mb-2">
-                            Responsabilidades:
+                            {t<string>("experience.responsibilities", "")}
                         </h5>
                         <ul className="space-y-2">
                             {exp.description.slice(1).map((desc, descIndex) => (
@@ -166,7 +120,7 @@ export const Experience: React.FC = () => {
 
                         <div>
                         <h5 className="font-semibold text-gray-900 dark:text-white mb-3">
-                            Tecnologías utilizadas:
+                            {t<string>("experience.technologies", "")}
                         </h5>
                         <div className="flex flex-wrap gap-2">
                             {exp.technologies.map((tech, techIndex) => (

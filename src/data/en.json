@@ -25,6 +25,58 @@
         }
         ]
     },
+    "experience": {
+        "title": "Professional",
+        "title2": "Experience",
+        "subtitle": "My professional journey in software development and tech education",
+        "current": "Current",
+        "details": "See more details...",
+        "responsibilities": "Responsibilities:",
+        "technologies": "Technologies used:",
+        "items": [
+                {
+                    "company": "Plug-zone",
+                    "position": "Fullstack Developer",
+                    "period": "Dec 2024 - Apr 2025",
+                    "location": "Argentina",
+                    "link": "https://plug-zone.com/",
+                    "description": [
+                        "Development of websites adapted to business logic.",
+                        "Implementation of file upload flow with validations and visual feedback.",
+                        "Contributions to data structure, user experience, and system logic.",
+                        "Direct coordination with the project leader and presentation of progress to the client."
+                    ],
+                    "technologies": ["React", "Node.js", "TypeScript", "PostgreSQL"]
+                },
+                {
+                    "company": "Disbyte s.a.",
+                    "position": "Fullstack Developer & Data Developer",
+                    "period": "Aug 2022 - Aug 2024",
+                    "location": "Argentina",
+                    "link": "https://www.disbyte.com/",
+                    "description": [
+                        "Data extraction and processing from APIs (e.g., MercadoLibre) and scraping with Python.",
+                        "Automation of internal processes across different company departments.",
+                        "Development of web applications to streamline and automate processes for multiple departments."
+                    ],
+                    "technologies": ["Python", "Selenium", "Pandas", "React", "Node.js", "PostgreSQL", "Postman", "MongoDB", "API REST", "AWS"]
+                },
+                {
+                    "company": "Coderhouse",
+                    "position": "Web Development & Frontend Tutor",
+                    "period": "Jul 2020 - Aug 2023",
+                    "location": "Argentina",
+                    "link": "https://www.coderhouse.com/ar/",
+                    "description": [
+                        "Support, project review, and tutoring sessions for over 300 students per month.",
+                        "Student assistance through Slack and live classes.",
+                        "Delivering tutoring sessions with additional content and resolving questions in real time.",
+                        "Project review focusing on best practices and clear structure."
+                    ],
+                    "technologies": ["HTML", "CSS", "JavaScript", "React", "Git", "Node.js", "Slack", "Agile methodologies"]
+                }
+        ]
+    },
     "education": {
         "title": "Education",
         "title2": "& Certifications",
@@ -132,6 +184,82 @@
             "send": "Send message",
             "sending": "Sending..."
         }
+    },
+    "skills": {
+        "title": "Technical ",
+        "title2": "Skills",
+        "subtitle": "My tech arsenal to build complete and scalable solutions",
+        "year": "Year",
+        "years": "Years",
+        "categories": [
+            {
+                "title": "Frontend",
+                "icon": "palette",
+                "color": "blue",
+                "skills": [
+                    { "name": "React.JS & Redux-Toolkit", "years": 3, "description": "Advanced development" },
+                    { "name": "JavaScript & TypeScript", "years": 4, "description": "Daily use" },
+                    { "name": "HTML, CSS & Sass", "years": 6, "description": "Full mastery" },
+                    { "name": "Next.JS", "years": 1, "description": "Commercial projects" },
+                    { "name": "Bootstrap & MaterialUI", "years": 4, "description": "UI frameworks" }
+                ]
+            },
+            {
+                "title": "Backend",
+                "icon": "code",
+                "color": "green",
+                "skills": [
+                    { "name": "Node.js", "years": 3, "description": "APIs and microservices" },
+                    { "name": "Python / Selenium / Pandas", "years": 2, "description": "Automation and data" },
+                    { "name": "REST API", "years": 4, "description": "Design and development" },
+                    { "name": "Microservices", "years": 2, "description": "Distributed architecture" }
+                ]
+            },
+            {
+                "title": "Databases",
+                "icon": "database",
+                "color": "orange",
+                "skills": [
+                    { "name": "SQL & Databases", "years": 4, "description": "Design and optimization" },
+                    { "name": "PostgreSQL", "years": 3, "description": "Main database" },
+                    { "name": "MongoDB", "years": 3, "description": "NoSQL and aggregations" },
+                    { "name": "SQL Server", "years": 1, "description": "Cache and sessions" }
+                ]
+            },
+            {
+                "title": "Tools",
+                "icon": "wrench",
+                "color": "purple",
+                "skills": [
+                    { "name": "Git - Github", "years": 6, "description": "Version control" },
+                    { "name": "Trello, Azure & Notion", "years": 4, "description": "Project management" },
+                    { "name": "Docker", "years": 1, "description": "Containerization" },
+                    { "name": "AWS", "years": 1, "description": "Cloud computing" }
+                ]
+            },
+            {
+                "title": "Methodologies",
+                "icon": "gitBranch",
+                "color": "indigo",
+                "skills": [
+                    { "name": "SCRUM", "years": 4, "description": "Agile methodology" },
+                    { "name": "Clean Code", "years": 5, "description": "Best practices" },
+                    { "name": "Design Patterns", "years": 3, "description": "Software architecture" },
+                    { "name": "TDD", "years": 2, "description": "Automated testing" }
+                ]
+            },
+            {
+                "title": "Soft Skills",
+                "icon": "users",
+                "color": "pink",
+                "skills": [
+                    { "name": "Mentoring", "years": 4, "description": "300+ students per month" },
+                    { "name": "Teamwork", "years": 6, "description": "Effective collaboration" },
+                    { "name": "Communication", "years": 6, "description": "Client and team" },
+                    { "name": "English B2", "years": 6, "description": "Official certification" }
+                ]
+            }
+        ]
     },
     "contact": {
         "title": "Let's Talk About Your ",

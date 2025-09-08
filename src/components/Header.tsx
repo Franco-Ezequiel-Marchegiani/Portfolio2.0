@@ -1,14 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { Moon, Sun, Menu, X } from 'lucide-react';
+import { useTranslation } from '../hooks/useTranslation';
+import type { NavItems } from "../types/Header";
 
 interface HeaderProps {
     darkMode: boolean;
     setDarkMode: (value: boolean) => void;
 }
+const ensureArray = <T,>(value: unknown): T[] => (Array.isArray(value) ? (value as T[]) : []);
 
 export const Header: React.FC<HeaderProps> = ({ darkMode, setDarkMode }) => {
+    const { t } = useTranslation();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
+    const rawNavItems = t<NavItems[]>("header.navItems", []);
+
+    const navItems = ensureArray<NavItems>(rawNavItems);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -26,16 +33,6 @@ export const Header: React.FC<HeaderProps> = ({ darkMode, setDarkMode }) => {
         setIsMenuOpen(false);
         }
     };
-
-    const navItems = [
-        { id: 'home', label: 'Inicio' },
-        { id: 'about', label: 'Sobre Mí' },
-        { id: 'experience', label: 'Experiencia' },
-        { id: 'skills', label: 'Habilidades' },
-        { id: 'projects', label: 'Proyectos' },
-        { id: 'contact', label: 'Contacto' },
-    ];
-
     return (
         <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isScrolled 
@@ -46,7 +43,7 @@ export const Header: React.FC<HeaderProps> = ({ darkMode, setDarkMode }) => {
             <div className="flex items-center justify-between h-16">
             <div className="flex-shrink-0">
                 <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-green-500 bg-clip-text text-transparent">
-                FM
+                {t<string>("header.initials", "")}
                 </span>
             </div>
 

@@ -1,28 +1,53 @@
 {
+    "hero": {
+    "initials": "FM",
+    "name": {
+        "first": "Franco",
+        "last": "Marchegiani"
+    },
+    "role": "Fullstack Web Developer & Tutor",
+    "contactInfo": {
+        "phone": "+54 9 11 5961-0005",
+        "email": "francoezequielmarchegiani2019@gmail.com",
+        "location": "Buenos Aires, Argentina",
+        "github": "https://github.com/Franco-Ezequiel-Marchegiani",
+        "linkedin": "https://www.linkedin.com/in/franco-ezequiel-marchegiani/",
+        "cv": "https://www.canva.com/design/DAGOsU3CpG4/rYxB7omo1UDvwW4rFvQX3Q/view?utm_content=DAGOsU3CpG4&utm_campaign=designshare&utm_medium=link&utm_source=editor",
+        "references": "https://docs.google.com/document/d/1Cz4A_U9j0aeN1c59jVKFEofqORmev4vlbMx-970AD6M/edit?usp=sharing"
+    },
+    "buttons": {
+        "contact": "Contact Me",
+        "projects": "View Projects"
+    }
+    },
     "about": {
-        "title": "About Me",
-        "summary": {
-        "p1": "I am a Fullstack Developer focused on creating scalable, efficient solutions aligned with business needs. I specialize in integrating back-end logic with clear and functional interfaces.",
-        "p2": "I work with attention to detail and fluent communication, adapting to different technologies and contexts.",
-        "p3": "I enjoy teaching and sharing knowledge, as well as solving complex problems, automating processes, and building products that create real impact. My experience ranges from developing complete web applications to automating business processes and mentoring new developers."
-        },
+        "title": "About",
+        "title2": "Me",
+        "summary": [
+            "I am a Fullstack Developer focused on building scalable, efficient solutions aligned with business needs. I specialize in integrating backend logic with clear and functional user interfaces.",
+            "I work with attention to detail and clear communication, adapting to different technologies and contexts.",
+            "I enjoy teaching and sharing knowledge, as well as solving complex problems, automating processes, and building products that generate real impact. My experience ranges from developing complete web applications to business process automation and mentoring new developers."
+        ],
         "buttons": {
-        "showMore": "Read more",
-        "showLess": "Show less"
+            "showMore": "Read more",
+            "showLess": "Show less"
         },
         "highlights": [
-        {
-            "title": "Results-Oriented",
-            "description": "I build scalable and efficient solutions aligned with business requirements"
-        },
-        {
-            "title": "Full Integration",
-            "description": "Specialized in integrating back-end logic with clear and functional interfaces"
-        },
-        {
-            "title": "Passion for Teaching",
-            "description": "I enjoy sharing knowledge and solving complex problems"
-        }
+            {
+                "icon": "target",
+                "title": "Results-Oriented",
+                "description": "I create scalable and efficient solutions aligned with business needs"
+            },
+            {
+                "icon": "lightbulb",
+                "title": "Complete Integration",
+                "description": "Specialized in integrating backend logic with clear and functional interfaces"
+            },
+            {
+                "icon": "heart",
+                "title": "Passion for Teaching",
+                "description": "I enjoy sharing knowledge and solving complex problems"
+            }
         ]
     },
     "experience": {

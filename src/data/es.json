@@ -1,28 +1,53 @@
 {
-    "about": {
-        "title": "Sobre Mí",
-        "summary": {
-        "p1": "Soy desarrollador Fullstack enfocado en crear soluciones escalables, eficientes y alineadas a las necesidades del negocio. Me especializo en integrar lógica de back-end con interfaces claras y funcionales.",
-        "p2": "Trabajo con atención al detalle y comunicación fluida, adaptándome a distintas tecnologías y contextos.",
-        "p3": "Disfruto enseñar y compartir conocimientos, como también resolver problemas complejos, automatizar procesos y construir productos que generen impacto real. Mi experiencia abarca desde el desarrollo de aplicaciones web completas hasta la automatización de procesos empresariales y la mentoría de nuevos desarrolladores."
+    "hero": {
+        "initials": "FM",
+        "name": {
+            "first": "Franco",
+            "last": "Marchegiani"
+        },
+        "role": "Desarrollador Web Fullstack & Tutor",
+        "contactInfo": {
+            "phone": "+54 9 11 5961-0005",
+            "email": "francoezequielmarchegiani2019@gmail.com",
+            "location": "CABA, Buenos Aires - Argentina",
+            "github": "https://github.com/Franco-Ezequiel-Marchegiani",
+            "linkedin": "https://www.linkedin.com/in/franco-ezequiel-marchegiani/",
+            "cv": "https://www.canva.com/design/DAGOsU3CpG4/rYxB7omo1UDvwW4rFvQX3Q/view?utm_content=DAGOsU3CpG4&utm_campaign=designshare&utm_medium=link&utm_source=editor",
+            "references": "https://docs.google.com/document/d/1Cz4A_U9j0aeN1c59jVKFEofqORmev4vlbMx-970AD6M/edit?usp=sharing"
         },
         "buttons": {
-        "showMore": "Leer más",
-        "showLess": "Mostrar menos"
+            "contact": "Contactame",
+            "projects": "Ver Proyectos"
+        }
+    },
+    "about": {
+        "title": "Sobre",
+        "title2": "Mí",
+        "summary": [
+            "Soy desarrollador Fullstack enfocado en crear soluciones escalables, eficientes y alineadas a las necesidades del negocio. Me especializo en integrar lógica de back-end con interfaces claras y funcionales.",
+            "Trabajo con atención al detalle y comunicación fluida, adaptándome a distintas tecnologías y contextos.",
+            "Disfruto enseñar y compartir conocimientos, como también resolver problemas complejos, automatizar procesos y construir productos que generen impacto real. Mi experiencia abarca desde el desarrollo de aplicaciones web completas hasta la automatización de procesos empresariales y la mentoría de nuevos desarrolladores."
+        ],
+        "buttons": {
+            "showMore": "Leer más",
+            "showLess": "Mostrar menos"
         },
         "highlights": [
-        {
-            "title": "Enfoque en Resultados",
-            "description": "Creo soluciones escalables y eficientes alineadas a las necesidades del negocio"
-        },
-        {
-            "title": "Integración Completa",
-            "description": "Especializado en integrar lógica de back-end con interfaces claras y funcionales"
-        },
-        {
-            "title": "Pasión por Enseñar",
-            "description": "Disfruto compartiendo conocimientos y resolviendo problemas complejos"
-        }
+            {
+                "icon": "target",
+                "title": "Enfoque en Resultados",
+                "description": "Creo soluciones escalables y eficientes alineadas a las necesidades del negocio"
+            },
+            {
+                "icon": "lightbulb",
+                "title": "Integración Completa",
+                "description": "Especializado en integrar lógica de back-end con interfaces claras y funcionales"
+            },
+            {
+                "icon": "heart",
+                "title": "Pasión por Enseñar",
+                "description": "Disfruto compartiendo conocimientos y resolviendo problemas complejos"
+            }
         ]
     },
     "experience": {

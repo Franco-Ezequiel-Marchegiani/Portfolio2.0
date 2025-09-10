@@ -9,6 +9,7 @@ import { Education } from './components/Education';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { TranslationProvider } from './context/TranslationContext';
+import { ScrollToTopButton } from './components/ScrollToTopButton';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -48,6 +49,7 @@ function App() {
           <Contact />
         </main>
         <Footer />
+        <ScrollToTopButton />
       </div>
     </TranslationProvider>
   );

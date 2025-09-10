@@ -27,8 +27,8 @@ export const Contact: React.FC = () => {
     };
 
     return (
-        <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900/50">
-        <div className="max-w-7xl mx-auto">
+        <section id="contact" className="py-16 px-3 sm:px-4 md:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900/50">
+        <div className="w-full max-w-lg sm:max-w-2xl md:max-w-4xl lg:max-w-7xl mx-auto overflow-hidden">
             <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
                 {t<string>("contact.title", "")}
@@ -81,19 +81,19 @@ export const Contact: React.FC = () => {
 
                 {/* Availability Status */}
                 <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 
-                            rounded-xl p-6">
-                <div className="flex items-center space-x-3 mb-3">
-                    <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                    <h4 className="font-semibold text-green-800 dark:text-green-400">
-                    {t<string>("contact.status.title", "")}
-                    </h4>
-                </div>
-                <p className="text-green-700 dark:text-green-300 text-sm">
-                    {t<string>("contact.status.text", "")}
-                </p>
-                <p className="text-green-700 dark:text-green-300 text-sm">
-                    {t<string>("contact.status.text2", "")}
-                </p>
+                    rounded-xl p-4 sm:p-6 text-sm sm:text-base">
+                    <div className="flex items-center space-x-3 mb-3">
+                        <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                        <h4 className="font-semibold text-green-800 dark:text-green-400">
+                        {t<string>("contact.status.title", "")}
+                        </h4>
+                    </div>
+                    <p className="text-green-700 dark:text-green-300 text-sm">
+                        {t<string>("contact.status.text", "")}
+                    </p>
+                    <p className="text-green-700 dark:text-green-300 text-sm">
+                        {t<string>("contact.status.text2", "")}
+                    </p>
                 </div>
             </div>
             {/* Contact Form */}

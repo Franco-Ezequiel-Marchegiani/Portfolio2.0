@@ -7,6 +7,7 @@
             { "id": "experience", "label": "Experiencia" },
             { "id": "skills", "label": "Habilidades" },
             { "id": "projects", "label": "Proyectos" },
+            { "id": "education", "label": "Educación" },
             { "id": "contact", "label": "Contacto" }
         ]
     },
@@ -174,19 +175,22 @@
         ]
     },
     "certifications": {
-        "title": "Certificaciones",
+        "title": "Certificaciones ",
+        "title2": "- Ver más",
         "items": [
         {
             "title": "Competencia Profesional Inglés B2",
             "issuer": "Liceo Británico",
             "type": "Idioma",
-            "icon": "award"
+            "icon": "award",
+            "file": "/Portfolio2.0/Certificado_LiceoBritanico.pdf"
         },
         {
             "title": "Tutor Certificado",
             "issuer": "Coderhouse",
             "type": "Educación",
-            "icon": "bookOpen"
+            "icon": "bookOpen",
+            "file": "/Portfolio2.0/Certificado_CoderHouse.png"
         }
         ]
     },
@@ -314,32 +318,32 @@
         },
         "info": [
             {
-            "icon": "phone",
-            "label": "Teléfono",
-            "value": "+54 9 11 5961-0005",
-            "href": "tel:+541159610005",
-            "color": "blue"
-            },
-            {
-            "icon": "mail",
-            "label": "Email",
-            "value": "francoezequielmarchegiani2019@gmail.com",
-            "href": "mailto:francoezequielmarchegiani2019@gmail.com",
-            "color": "green"
-            },
-            {
-            "icon": "mapPin",
-            "label": "Ubicación",
-            "value": "CABA, Buenos Aires - Argentina",
-            "href": "https://www.google.com.ar/maps/place/Villa+Urquiza,+Cdad.+Aut%C3%B3noma+de+Buenos+Aires",
-            "color": "orange"
-            },
-            {
             "icon": "messageCircle",
             "label": "WhatsApp",
             "value": "Contacto directo",
             "href": "https://api.whatsapp.com/send/?phone=541159610005&text=¡Hola Franco! Me interesa contactarte sobre una oportunidad laboral.",
             "color": "green"
+            },
+            {
+                "icon": "mail",
+                "label": "Email",
+                "value": "francoezequielmarchegiani2019@gmail.com",
+                "href": "mailto:francoezequielmarchegiani2019@gmail.com",
+                "color": "green"
+            },
+            {
+                "icon": "mapPin",
+                "label": "Ubicación",
+                "value": "CABA, Buenos Aires - Argentina",
+                "href": "https://www.google.com.ar/maps/place/Villa+Urquiza,+Cdad.+Aut%C3%B3noma+de+Buenos+Aires",
+                "color": "orange"
+            },
+            {
+            "icon": "phone",
+            "label": "Teléfono",
+            "value": "+54 9 11 5961-0005",
+            "href": "tel:+541159610005",
+            "color": "blue"
             }
         ]
     },
@@ -350,6 +354,8 @@
         "loadingMsg": "Cargando proyectos...",
         "msgNotFound": "No hay proyectos en esta categoría por el momento.",
         "more": "Más",
+        "showCode": "Ver Código",
+        "showDemo": "Ver Demo",
         "mainFeatures": "Características principales:",
         "completeTechnology": "Tecnologías completas:",
         "cta": {

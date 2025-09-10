@@ -7,6 +7,7 @@
             { "id": "experience", "label": "Experience" },
             { "id": "skills", "label": "Skills" },
             { "id": "projects", "label": "Projects" },
+            { "id": "education", "label": "Education" },
             { "id": "contact", "label": "Contact" }
         ]
     },
@@ -174,19 +175,22 @@
         ]
     },
     "certifications": {
-        "title": "Certifications",
+        "title": "Certifications ",
+        "title2": "- See more",
         "items": [
         {
             "title": "Professional Competency English B2",
             "issuer": "British Institute",
             "type": "Language",
-            "icon": "award"
+            "icon": "award",
+            "file": "/Portfolio2.0/Certificado_LiceoBritanico.pdf"
         },
         {
             "title": "Certified Tutor",
             "issuer": "Coderhouse",
             "type": "Education",
-            "icon": "bookOpen"
+            "icon": "bookOpen",
+            "file": "/Portfolio2.0/Certificado_CoderHouse.png"
         }
         ]
     },
@@ -312,11 +316,11 @@
         },
         "info": [
             {
-            "icon": "phone",
-            "label": "Phone",
-            "value": "+54 9 11 5961-0005",
-            "href": "tel:+541159610005",
-            "color": "blue"
+            "icon": "messageCircle",
+            "label": "WhatsApp",
+            "value": "Direct contact",
+            "href": "https://api.whatsapp.com/send/?phone=541159610005&text=Hi Franco! I’d like to get in touch regarding a job opportunity.",
+            "color": "green"
             },
             {
             "icon": "mail",
@@ -333,11 +337,11 @@
             "color": "orange"
             },
             {
-            "icon": "messageCircle",
-            "label": "WhatsApp",
-            "value": "Direct contact",
-            "href": "https://api.whatsapp.com/send/?phone=541159610005&text=Hi Franco! I’d like to get in touch regarding a job opportunity.",
-            "color": "green"
+            "icon": "phone",
+            "label": "Phone",
+            "value": "+54 9 11 5961-0005",
+            "href": "tel:+541159610005",
+            "color": "blue"
             }
         ]
     },
@@ -348,6 +352,8 @@
         "loadingMsg": "Loading projects...",
         "msgNotFound": "There are no projects in this category at the moment.",
         "more": "More",
+        "showCode": "See Code",
+        "showDemo": "See Demo",
         "mainFeatures": "Main features:",
         "completeTechnology": "Complete Technology Stack:",
         "cta": {

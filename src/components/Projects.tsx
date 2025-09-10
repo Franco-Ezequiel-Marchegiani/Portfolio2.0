@@ -165,18 +165,25 @@ export const Projects: React.FC = () => {
                       </div>
                     </div>
                   )}
-
+                  {/* showCode
+                  showDemo */}
                   {/* Action Buttons */}
                   <div className="flex items-center justify-between mt-6">
                     <div className="flex space-x-3">
                       {project.github && (
                         <a href={project.github} target="_blank" rel="noopener noreferrer" className="p-2 bg-gray-100 dark:bg-gray-700 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors duration-200">
                           <Github className="h-4 w-4 text-gray-600 dark:text-gray-400" />
+                          {/* <span className="h-4 w-4 text-gray-600 dark:text-gray-400">
+                            {t<string>("projects.showCode", "")}
+                          </span> */}
                         </a>
                       )}
                       {project.demo && (
                         <a href={project.demo} target="_blank" rel="noopener noreferrer" className="p-2 bg-blue-100 dark:bg-blue-900/20 rounded-lg hover:bg-blue-200 dark:hover:bg-blue-900/40 transition-colors duration-200">
                           <ExternalLink className="h-4 w-4 text-blue-600 dark:text-blue-400" />
+                          {/* <span className="h-4 w-4 text-blue-600 dark:text-blue-400">
+                            {t<string>("projects.showDemo", "")}
+                          </span> */}
                         </a>
                       )}
                     </div>

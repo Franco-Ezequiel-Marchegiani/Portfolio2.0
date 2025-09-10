@@ -3,4 +3,5 @@ export type Certifications = {
     issuer: string;
     type: string;
     icon?: string;
+    file: string;
 };

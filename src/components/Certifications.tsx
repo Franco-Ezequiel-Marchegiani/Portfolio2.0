@@ -16,9 +16,19 @@ export const Certification: React.FC = () => {
     return (
             <div>
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 flex items-center">
-                    <a className='flex items-center hover:scale-105 transition-all duration-200' href="https://drive.google.com/drive/folders/1fulbnGmD6OEi4naRnUlknbzJ0m6CW0N_?usp=sharing" target="_blank" rel="noopener noreferrer">
+                    <a
+                    className="flex items-center hover:scale-105 transition-all duration-200"
+                    href="https://drive.google.com/drive/folders/1fulbnGmD6OEi4naRnUlknbzJ0m6CW0N_?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >
                         <Award className="h-6 w-6 mr-3 text-green-500" />
-                        {t<string>("certifications.title", "")}
+                        <span className="bg-gradient-to-r from-blue-600 to-green-500 bg-clip-text text-transparent">
+                            {t<string>("certifications.title", "")}
+                        </span>
+                        <span className="ml-2">
+                            {t<string>("certifications.title2", "")}
+                        </span>
                     </a>
                 </h3>
                 
@@ -35,12 +45,14 @@ export const Certification: React.FC = () => {
                         {iconMap[cert.icon ?? '']}
                         </div>
                         <div className="flex-1">
-                        <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
-                            {cert.title}
-                        </h4>
-                        <p className="text-gray-600 dark:text-gray-400 mb-2">
-                            {cert.issuer}
-                        </p>
+                        <a href={cert.file} download={`${cert.title.replace(/[^\w]/g, "_")}_Franco_Marchegiani`}>
+                            <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
+                                {cert.title}
+                            </h4>
+                            <p className="text-gray-600 dark:text-gray-400 mb-2">
+                                {cert.issuer}
+                            </p>
+                        </a>
                         <span className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 
                                         dark:text-gray-400 text-sm rounded-full">
                             {cert.type}

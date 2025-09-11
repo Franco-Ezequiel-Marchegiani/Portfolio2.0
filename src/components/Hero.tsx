@@ -5,9 +5,6 @@ import { useTranslation } from '../hooks/useTranslation';
 export const Hero: React.FC = () => {
     const { t } = useTranslation();
     
-    const savedTheme = localStorage.getItem('theme');
-    console.log("savedTheme:", savedTheme);
-    
     return (
         <section id="home" className="min-h-screen flex items-center justify-center pt-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">

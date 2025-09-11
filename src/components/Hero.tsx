@@ -4,16 +4,10 @@ import { useTranslation } from '../hooks/useTranslation';
 
 export const Hero: React.FC = () => {
     const { t } = useTranslation();
-    /* const contactInfo = {
-        phone: '+54 9 11 5961-0005',
-        email: 'francoezequielmarchegiani2019@gmail.com',
-        location: 'CABA, Buenos Aires - Argentina',
-        github: 'https://github.com/Franco-Ezequiel-Marchegiani',
-        linkedin: 'https://www.linkedin.com/in/franco-e-marchegiani/',
-        cv: 'https://www.canva.com/design/DAGOsU3CpG4/rYxB7omo1UDvwW4rFvQX3Q/view?utm_content=DAGOsU3CpG4&utm_campaign=designshare&utm_medium=link&utm_source=editor',
-        references: 'https://docs.google.com/document/d/1Cz4A_U9j0aeN1c59jVKFEofqORmev4vlbMx-970AD6M/edit?usp=sharing'
-    }; */
-
+    
+    const savedTheme = localStorage.getItem('theme');
+    console.log("savedTheme:", savedTheme);
+    
     return (
         <section id="home" className="min-h-screen flex items-center justify-center pt-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -29,7 +23,16 @@ export const Hero: React.FC = () => {
                         {t<string>("hero.name.last", "")}
                     </h1>
                     <h2 className="text-xl lg:text-2xl text-gray-600 dark:text-gray-300 font-medium">
-                        {t<string>("hero.role", "")}
+                            <a href="https://git.io/typing-svg">
+                                <img 
+                                    className="hidden dark:block"
+                                    src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&duration=2300&pause=1000&color=E5E7EB&width=435&lines=Full+Stack+Developer;Data+Analyst;Tutor+y+Docente;QA+Tester" alt="Typing SVG" />
+                            </a>
+                            <a href="https://git.io/typing-svg">
+                                <img 
+                                className="block dark:hidden"
+                                src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&duration=2300&pause=1000&color=111827&width=435&lines=Full+Stack+Developer;Data+Analyst;Tutor+y+Docente;QA+Tester" alt="Typing SVG" />
+                            </a>                    
                     </h2>
                 </div>
                     

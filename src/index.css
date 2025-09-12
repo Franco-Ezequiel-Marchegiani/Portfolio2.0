@@ -1,3 +1,42 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+html,
+body,
+#root {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+:root {
+    --citron: #CACF85;
+    --olivine: #8CBA80;
+    --air-force-blue: #658E9C;
+    --ultra-violet: #4D5382;
+    --english-violet: #514663;
+
+    --mindaro: #fffd98;
+    --celadon: #BDE4A7;
+    --celadon-dark: #B3D2B2;
+    --powder-blue: #9fbbcc;
+    --vista-blue: #7A9CC6;
+}
+
+.typing {
+  display: inline-block;
+  overflow: hidden;
+  border-right: .15em solid currentColor; /* hereda color dinámico */
+  white-space: pre; /* respeta salto de línea */
+  animation: typing 3s steps(30, end), blink .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  from, to { border-color: transparent }
+  50% { border-color: currentColor; }
+}

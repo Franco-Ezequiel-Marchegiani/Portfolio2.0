@@ -44,7 +44,7 @@ export const Header: React.FC<HeaderProps> = ({ darkMode, setDarkMode }) => {
             <div className="flex-shrink-0">
                 <button onClick={() => scrollToSection("home")}>
                     <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-green-500 bg-clip-text text-transparent">
-                    {t<string>("header.initials", "")}
+                    {t<string>("header.title", "")}
                     </span>
                 </button>
             </div>

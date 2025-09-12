@@ -1,6 +1,6 @@
 {
     "header": {
-        "initials": "FM",
+        "title": "Portfolio",
         "navItems": [
             { "id": "home", "label": "Inicio" },
             { "id": "about", "label": "Sobre Mí" },
@@ -14,7 +14,7 @@
     "hero": {
         "initials": "FM",
         "name": {
-            "first": "Franco",
+            "first": "Franco Ezequiel",
             "last": "Marchegiani"
         },
         "role": "Desarrollador Web Fullstack & Tutor",

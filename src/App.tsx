@@ -31,6 +31,14 @@ function App() {
     }
   }, [darkMode]);
 
+  /* 
+  className={`min-h-screen transition-colors duration-300 ${
+          darkMode
+            ? "bg-gradient-to-br from-[var(--ultra-violet)] to-[var(--english-violet)]"
+            : "bg-gradient-to-br from-[var(--mindaro)] to-[var(--vista-blue)]"
+        }`
+  */
+
   return (
     <TranslationProvider>
       <div className={`min-h-screen transition-colors duration-300 ${

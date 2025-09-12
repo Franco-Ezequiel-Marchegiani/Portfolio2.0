@@ -1,6 +1,9 @@
 import React from 'react';
 import { MapPin, Mail, Phone, Github, Linkedin, ExternalLink, FileText } from 'lucide-react';
 import { useTranslation } from '../hooks/useTranslation';
+import { motion } from "framer-motion";
+import profile from '../../public/retrato_calido_de_un_joven.png'
+import profileIA from '../../public/retrato_calido_de_un_joven_chibli.png'
 
 export const Hero: React.FC = () => {
     const { t } = useTranslation();
@@ -12,12 +15,14 @@ export const Hero: React.FC = () => {
             {/* Content */}
             <div className="text-center lg:text-left space-y-8">
                 <div className="space-y-4">
-                    <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
+                    <h1 className="text-5xl lg:text-6xl font-bold leading-tight typing text-gray-900 dark:text-white">
                         <span className="bg-gradient-to-r from-blue-600 via-green-500 to-orange-500 bg-clip-text text-transparent">
-                        {t<string>("hero.name.first", "")}
-                        </span>{' '}
-                        <br />
-                        {t<string>("hero.name.last", "")}
+                            {t<string>("hero.name.first", "")}
+                        </span>
+                        {"\n"}
+                        <span>
+                            {t<string>("hero.name.last", "")}
+                        </span>
                     </h1>
                     <h2 className="text-xl lg:text-2xl text-gray-600 dark:text-gray-300 font-medium">
                             <a href="https://git.io/typing-svg">
@@ -120,13 +125,32 @@ export const Hero: React.FC = () => {
             {/* Visual Element */}
             <div className="flex justify-center lg:justify-end">
                 <div className="relative">
-                <div className="w-80 h-80 bg-gradient-to-br from-blue-400 via-green-400 to-orange-400 rounded-full 
-                            opacity-20 blur-3xl absolute -inset-4"></div>
-                <div className="relative w-72 h-72 bg-gradient-to-br from-blue-600 via-green-500 to-orange-500 
-                            rounded-2xl flex items-center justify-center text-white text-6xl font-bold 
-                            shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-300">
-                    FM
-                </div>
+                    {/* Glow de fondo */}
+                    <div className="w-80 h-80 bg-gradient-to-br from-blue-400 via-green-400 to-orange-400 
+                                    rounded-full opacity-20 blur-3xl absolute -inset-4"></div>
+                    {/* Imagen con animación */}
+                    <motion.div
+                    initial={{ opacity: 0, y: 50 }}   // Aparece desde abajo con fade
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1, ease: "easeOut" }}
+                    className="relative w-80 h-80 rounded-full overflow-hidden shadow-2xl"
+                    >
+                    <div className="relative w-80 h-80 rounded-full overflow-hidden">
+                        {/* Imagen base */}
+                        <img
+                            src={profileIA}
+                            alt="profile"
+                            className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-100 hover:opacity-0"
+                        />
+                        {/* Imagen al hover */}
+                        <img
+                            src={profile}
+                            alt="profileIA"
+                            className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 hover:opacity-100"
+                        />
+                    </div>
+                    
+                    </motion.div>
                 </div>
             </div>
             </div>

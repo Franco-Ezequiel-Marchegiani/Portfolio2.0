@@ -22,7 +22,7 @@ export const Hero: React.FC = () => {
                             {t<string>("hero.name.first", "")}
                         </span>
                         {"\n"}
-                        <span>
+                        <span className="pb-4 inline-block">
                             {t<string>("hero.name.last", "")}
                         </span>
                     </h1>

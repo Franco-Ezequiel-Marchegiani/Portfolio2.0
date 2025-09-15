@@ -50,7 +50,7 @@ export const Header: React.FC<HeaderProps> = ({ darkMode, setDarkMode }) => {
             </div>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex space-x-8">
+            <nav className="hidden nav:flex space-x-8">
                 {navItems.map((item) => (
                 <button
                     key={item.id}
@@ -85,7 +85,7 @@ export const Header: React.FC<HeaderProps> = ({ darkMode, setDarkMode }) => {
 
                 <button
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
-                    className="md:hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300
+                    className="nav:hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300
                             hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
                     >
                     {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -96,7 +96,7 @@ export const Header: React.FC<HeaderProps> = ({ darkMode, setDarkMode }) => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-            <div className="md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
+            <div className="nav:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
             <div className="px-2 pt-2 pb-3 space-y-1">
                 {navItems.map((item) => (
                 <button

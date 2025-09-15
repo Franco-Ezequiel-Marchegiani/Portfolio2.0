@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Mail, Phone, Github, Linkedin, ExternalLink, FileText } from 'lucide-react';
+import { MapPin, Mail, Phone, Github, Linkedin, FileUser, BookOpen } from 'lucide-react';
 import { useTranslation } from '../hooks/useTranslation';
 import { motion } from "framer-motion";
 import profile from '../../public/retrato_calido_de_un_joven.png'
@@ -28,12 +28,12 @@ export const Hero: React.FC = () => {
                             <a href="https://git.io/typing-svg">
                                 <img 
                                     className="hidden dark:block"
-                                    src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&duration=2300&pause=1000&color=E5E7EB&width=435&lines=Full+Stack+Developer;Data+Analyst;Tutor+y+Docente;QA+Tester" alt="Typing SVG" />
+                                    src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&duration=2300&pause=1000&color=E5E7EB&width=435&lines=Full+Stack+%26+SAP+Developer;Data+Analyst;Docente+y+Tutor++;QA+Tester" alt="Typing SVG" />
                             </a>
                             <a href="https://git.io/typing-svg">
                                 <img 
                                 className="block dark:hidden"
-                                src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&duration=2300&pause=1000&color=111827&width=435&lines=Full+Stack+Developer;Data+Analyst;Tutor+y+Docente;QA+Tester" alt="Typing SVG" />
+                                src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&duration=2300&pause=1000&color=111827&width=435&lines=Full+Stack+%26+SAP+Developer;Data+Analyst;Docente+y+Tutor++;QA+Tester" alt="Typing SVG" />
                             </a>                    
                     </h2>
                 </div>
@@ -62,42 +62,71 @@ export const Hero: React.FC = () => {
 
                 {/* Social Links */}
                 <div className="flex justify-center lg:justify-start space-x-4">
-                <a
+                {/* GitHub */}
+                <div className="relative group">
+                    <a
                     href={t<string>("hero.contactInfo.github", "")}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 bg-gray-100 dark:bg-gray-800 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 
-                            transition-colors duration-200 group"
-                >
+                                transition-colors duration-200 flex items-center justify-center"
+                    >
                     <Github className="h-5 w-5 text-gray-600 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" />
-                </a>
-                <a
+                    </a>
+                    <span className="absolute bottom-full mb-2 px-2 py-1 text-xs text-white bg-gray-800 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
+                    {t<string>("hero.text_github", "")}
+                    </span>
+                </div>
+
+                {/* LinkedIn */}
+                <div className="relative group">
+                    <a
                     href={t<string>("hero.contactInfo.linkedin", "")}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 bg-blue-100 dark:bg-blue-900/20 rounded-lg hover:bg-blue-200 dark:hover:bg-blue-900/40 
-                            transition-colors duration-200 group"
-                >
+                                transition-colors duration-200 flex items-center justify-center"
+                    >
                     <Linkedin className="h-5 w-5 text-blue-600 dark:text-blue-400 group-hover:text-blue-700 dark:group-hover:text-blue-300" />
-                </a>
-                <a
+                    </a>
+                    <span className="absolute bottom-full mb-2 px-2 py-1 text-xs text-white bg-gray-800 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
+                    {t<string>("hero.text_linkedIn", "")}
+                    </span>
+                </div>
+
+                {/* CV */}
+                <div className="relative group">
+                    <a
                     href={t<string>("hero.contactInfo.cv", "")}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 bg-green-100 dark:bg-green-900/20 rounded-lg hover:bg-green-200 dark:hover:bg-green-900/40 
-                            transition-colors duration-200 group"
-                >
-                    <ExternalLink className="h-5 w-5 text-green-600 dark:text-green-400 group-hover:text-green-700 dark:group-hover:text-green-300" />
-                </a>
-                <a
+                                transition-colors duration-200 flex items-center justify-center"
+                    >
+                    {/* Cambié el icono */}
+                    <FileUser className="h-5 w-5 text-green-600 dark:text-green-400 group-hover:text-green-700 dark:group-hover:text-green-300" />
+                    </a>
+                    <span className="absolute bottom-full mb-2 px-2 py-1 text-xs text-white bg-gray-800 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
+                    {t<string>("hero.text_cv", "")}
+                    </span>
+                </div>
+
+                {/* Referencias */}
+                <div className="relative group">
+                    <a
                     href={t<string>("hero.contactInfo.references", "")}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 bg-orange-100 dark:bg-orange-900/20 rounded-lg hover:bg-orange-200 dark:hover:bg-orange-900/40 
-                            transition-colors duration-200 group"
-                >
-                    <FileText className="h-5 w-5 text-orange-600 dark:text-orange-400 group-hover:text-orange-700 dark:group-hover:text-orange-300" />
-                </a>
+                                transition-colors duration-200 flex items-center justify-center"
+                    >
+                    {/* Cambié el icono */}
+                    <BookOpen className="h-5 w-5 text-orange-600 dark:text-orange-400 group-hover:text-orange-700 dark:group-hover:text-orange-300" />
+                    </a>
+                    <span className="absolute bottom-full mb-2 px-2 py-1 text-xs text-white bg-gray-800 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
+                    {t<string>("hero.text_references", "")}
+                    </span>
+                </div>
                 </div>
 
                 {/* CTA Buttons */}

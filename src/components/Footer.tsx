@@ -6,10 +6,10 @@ import { useTranslation } from '../hooks/useTranslation';
 const ensureArray = <T,>(value: unknown): T[] => (Array.isArray(value) ? (value as T[]) : []);
 
 const iconMap: Record<string, JSX.Element> = {
-  github: <Github className="h-4 w-4" />,
-  linkedin: <Linkedin className="h-4 w-4" />,
-  cv: <FileUser className="h-4 w-4" />,
-  email: <Mail className="h-4 w-4" />
+    github: <Github className="h-4 w-4" />,
+    linkedin: <Linkedin className="h-4 w-4" />,
+    cv: <FileUser className="h-4 w-4" />,
+    email: <Mail className="h-4 w-4" />
 };
 
 export const Footer: React.FC = () => {

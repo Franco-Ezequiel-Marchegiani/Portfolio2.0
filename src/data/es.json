@@ -76,6 +76,22 @@
         "technologies": "Tecnologías utilizadas:",
         "items": [
                 {
+                    "company": "ARTECH – Fundación Pescar",
+                    "position": "Pasante en SAP / Análisis de Datos",
+                    "period": "Jul 2025 – Dic 2025",
+                    "location": "Argentina",
+                    "link": "https://www.artech-consulting.com/",
+                    "current": true,
+                    "description": [
+                        "Participación en un programa intensivo con modalidad de pasantía orientado al mundo laboral IT.",
+                        "Prácticas en entornos SAP (ABAP, Fiori, SAP BTP) y desarrollo de aplicaciones con JavaScript.",
+                        "Entrenamiento en análisis de datos utilizando SQL, Python, Power BI, Databricks y PowerApps.",
+                        "Colaboración en proyectos simulados con equipos multidisciplinarios, aplicando metodologías ágiles.",
+                        "Desarrollo de habilidades blandas clave: comunicación efectiva, liderazgo, planificación y trabajo en equipo."
+                    ],
+                    "technologies": ["SQL", "ABAP", "SAP Fiori", "SAP BTP", "JavaScript", "Python", "Power BI", "Databricks", "PowerApps"]
+                },
+                {
                     "company": "Plug-zone",
                     "position": "Fullstack Developer",
                     "period": "Dic 2024 - Abr 2025",
@@ -127,55 +143,64 @@
         "status_progress": "En curso",
         "status_Graduated": "Egresado",
         "items": [
-        {
-            "institution": "UTN",
-            "link": "https://fra.utn.edu.ar/tecnicatura-universitaria/",
-            "degree": "Tecnicatura Universitaria en Programación",
-            "period": "2024 - Actualidad",
-            "status": "En curso",
-            "description": "Formación técnica universitaria enfocada en programación, desarrollo de software y Análisis de Datos.",
-            "highlights": [
-            "Algoritmos y estructuras de datos",
-            "Programación orientada a objetos",
-            "Base de datos",
-            "Python",
-            "POO",
-            "Prob. y Estadísticas",
-            "Análisis de Datos",
-            "Inglés técnico"
-            ]
-        },
-        {
-            "institution": "Digital House",
-            "link": "https://www.digitalhouse.com/ar",
-            "degree": "Certified Tech Developer",
-            "period": "2023 - 2024",
-            "status": "Egresado",
-            "description": "Carrera de Professional Web Developer creada en conjunto con Mercado Libre y Globant.",
-            "highlights": [
-            "Metodologías ágiles",
-            "React y Next.JS",
-            "Base de Datos SQL y NoSQL",
-            "Arquitectura de software",
-            "DevOps y Cloud",
-            "Proyecto final integrador"
-            ]
-        },
-        {
-            "institution": "Digital House",
-            "link": "https://www.digitalhouse.com/ar",
-            "degree": "Fullstack Web Developer",
-            "period": "2021 - 2022",
-            "status": "Egresado",
-            "description": "Formación completa en desarrollo web frontend y backend.",
-            "highlights": [
-            "HTML, CSS, JavaScript",
-            "React y Node.js",
-            "Bases de datos SQL y NoSQL",
-            "APIs REST",
-            "Metodologías ágiles"
-            ]
-        }
+            {
+                "institution": "ARTECH – Fundación Pescar",
+                "link": "https://www.pescar.org.ar/",
+                "degree": "Programa de Formación en SAP y Análisis de Datos",
+                "period": "Julio 2025 - Diciembre 2025",
+                "status": "En curso",
+                "description": "Programa intensivo de formación para la inserción laboral en IT, con contenidos técnicos y habilidades interpersonales.",
+                "highlights": ["SQL", "ABAP", "SAP Fiori", "SAP BTP", "JavaScript", "Python", "Power BI", "Databricks", "PowerApps"]
+            },
+            {
+                "institution": "UTN",
+                "link": "https://fra.utn.edu.ar/tecnicatura-universitaria/",
+                "degree": "Tecnicatura Universitaria en Programación",
+                "period": "2024 - Actualidad",
+                "status": "En curso",
+                "description": "Formación técnica universitaria enfocada en programación, desarrollo de software y Análisis de Datos.",
+                "highlights": [
+                "Algoritmos y estructuras de datos",
+                "Programación orientada a objetos",
+                "Base de datos",
+                "Python",
+                "POO",
+                "Prob. y Estadísticas",
+                "Análisis de Datos",
+                "Inglés técnico"
+                ]
+            },
+            {
+                "institution": "Digital House",
+                "link": "https://www.digitalhouse.com/ar",
+                "degree": "Certified Tech Developer",
+                "period": "2023 - 2024",
+                "status": "Egresado",
+                "description": "Carrera de Professional Web Developer creada en conjunto con Mercado Libre y Globant.",
+                "highlights": [
+                "Metodologías ágiles",
+                "React y Next.JS",
+                "Base de Datos SQL y NoSQL",
+                "Arquitectura de software",
+                "DevOps y Cloud",
+                "Proyecto final integrador"
+                ]
+            },
+            {
+                "institution": "Digital House",
+                "link": "https://www.digitalhouse.com/ar",
+                "degree": "Fullstack Web Developer",
+                "period": "2021 - 2022",
+                "status": "Egresado",
+                "description": "Formación completa en desarrollo web frontend y backend.",
+                "highlights": [
+                "HTML, CSS, JavaScript",
+                "React y Node.js",
+                "Bases de datos SQL y NoSQL",
+                "APIs REST",
+                "Metodologías ágiles"
+                ]
+            }
         ]
     },
     "certifications": {
@@ -307,7 +332,6 @@
             }
         ]
     },
-
     "contact": {
         "title": "¿Hablamos sobre tu ",
         "title2": "Proyecto",

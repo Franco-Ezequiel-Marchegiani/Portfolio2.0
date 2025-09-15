@@ -76,6 +76,22 @@
         "technologies": "Technologies used:",
         "items": [
                 {
+                "company": "ARTECH – Fundación Pescar",
+                "position": "Intern in SAP / Data Analysis",
+                "period": "Jul 2025 – Dec 2025",
+                "location": "Argentina",
+                "link": "https://www.artech-consulting.com/",
+                "current": true,
+                "description": [
+                    "Participation in an intensive internship-oriented program focused on IT career readiness.",
+                    "Hands-on practice in SAP environments (ABAP, Fiori, SAP BTP) and application development with JavaScript.",
+                    "Training in data analysis using SQL, Python, Power BI, Databricks, and PowerApps.",
+                    "Collaboration on simulated projects with multidisciplinary teams, applying agile methodologies.",
+                    "Development of key soft skills: effective communication, leadership, planning, and teamwork."
+                ],
+                "technologies": ["SQL", "ABAP", "SAP Fiori", "SAP BTP", "JavaScript", "Python", "Power BI", "Databricks", "PowerApps"]
+                },
+                {
                     "company": "Plug-zone",
                     "position": "Fullstack Developer",
                     "period": "Dec 2024 - Apr 2025",
@@ -127,6 +143,15 @@
         "status_progress": "In progress",
         "status_Graduated": "Graduated",
         "items": [
+            {
+                "institution": "ARTECH – Fundación Pescar",
+                "link": "https://www.pescar.org.ar/",
+                "degree": "Training Program in SAP and Data Analysis",
+                "period": "July 2025 - December 2025",
+                "status": "In progress",
+                "description": "Intensive training program for IT job readiness, combining technical education and interpersonal skills.",
+                "highlights": ["SQL", "ABAP", "SAP Fiori", "SAP BTP", "JavaScript", "Python", "Power BI", "Databricks", "PowerApps"]
+            },
             {
                 "institution": "UTN",
                 "link": "https://fra.utn.edu.ar/tecnicatura-universitaria/",

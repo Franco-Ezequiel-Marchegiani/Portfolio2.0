@@ -1,5 +1,5 @@
 import React, { type JSX } from 'react';
-import { Heart, Github, Linkedin, Mail, ExternalLink } from 'lucide-react';
+import { Heart, Github, Linkedin, Mail, FileUser, ExternalLink } from 'lucide-react';
 import type { SocialLink, QuickLink } from "../types/Footer";
 import { useTranslation } from '../hooks/useTranslation';
 
@@ -8,7 +8,7 @@ const ensureArray = <T,>(value: unknown): T[] => (Array.isArray(value) ? (value 
 const iconMap: Record<string, JSX.Element> = {
   github: <Github className="h-4 w-4" />,
   linkedin: <Linkedin className="h-4 w-4" />,
-  cv: <ExternalLink className="h-4 w-4" />,
+  cv: <FileUser className="h-4 w-4" />,
   email: <Mail className="h-4 w-4" />
 };
 
@@ -47,19 +47,24 @@ export const Footer: React.FC = () => {
                 </p>
                 <div className="flex space-x-4">
                 {socialLinks.map((link, index) => (
-                    <a
-                    key={index}
-                    href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={link.label}
-                    className="p-2 bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors duration-200 group"
-                    >
-                    <div className="text-gray-400 group-hover:text-white transition-colors duration-200">
-                        
-                        {iconMap[link.icon ?? 'Github']}
+                    <div className="flex space-x-4 relative group">
+                        <a
+                        key={index}
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={link.label}
+                        className="p-2 bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors duration-200 group"
+                        >
+                        <div className="text-gray-400 group-hover:text-white transition-colors duration-200">
+                            
+                            {iconMap[link.icon ?? 'Github']}
+                            <span className="absolute bottom-full mb-2 px-2 py-1 text-xs text-white bg-gray-800 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
+                                {link.text_label}
+                            </span>
+                        </div>
+                        </a>
                     </div>
-                    </a>
                 ))}
                 </div>
             </div>

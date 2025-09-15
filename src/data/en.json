@@ -512,10 +512,30 @@
             "contact": "Contact"
         },
         "social": [
-            { "icon": "github", "href": "https://github.com/Franco-Ezequiel-Marchegiani", "label": "GitHub" },
-            { "icon": "linkedin", "href": "https://www.linkedin.com/in/franco-e-marchegiani/", "label": "LinkedIn" },
-            { "icon": "cv", "href": "https://www.canva.com/design/DAGOsU3CpG4/rYxB7omo1UDvwW4rFvQX3Q/view?utm_content=DAGOsU3CpG4&utm_campaign=designshare&utm_medium=link&utm_source=editor", "label": "Cv" },
-            { "icon": "email", "href": "mailto:francoezequielmarchegiani2019@gmail.com", "label": "Email" }
+            {   
+                "icon": "github", 
+                "text_label": "GitHub",
+                "href": "https://github.com/Franco-Ezequiel-Marchegiani", 
+                "label": "GitHub" 
+            },
+            {   
+                "icon": "linkedin", 
+                "text_label": "LinkedIn",
+                "href": "https://www.linkedin.com/in/franco-e-marchegiani/", 
+                "label": "LinkedIn" 
+            },
+            {   
+                "icon": "cv", 
+                "text_label": "Curriculum Vitae",
+                "href": "https://www.canva.com/design/DAGzD6EN6Pk/bRJCJ7NuRazu4WG3KXO1wg/view?utm_content=DAGzD6EN6Pk&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h085b92c6b8", 
+                "label": "Cv" 
+            },
+            {   
+                "icon": "email", 
+                "text_label": "Email",
+                "href": "mailto:francoezequielmarchegiani2019@gmail.com", 
+                "label": "Email" 
+            }
         ],
         "quickLinks": [
             { "name": "Home", "href": "#home" },

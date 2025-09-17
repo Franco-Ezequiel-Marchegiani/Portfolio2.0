@@ -176,7 +176,6 @@ export const Hero: React.FC = () => {
                             className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 hover:opacity-100"
                         />
                     </div>
-                    
                     </motion.div>
                 </div>
             </div>

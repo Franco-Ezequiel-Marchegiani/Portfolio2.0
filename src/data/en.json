@@ -4,7 +4,14 @@
         "navItems": [
             { "id": "home", "label": "Home" },
             { "id": "about", "label": "About Me" },
-            { "id": "experience", "label": "Experience" },
+            { 
+            "id": "experience",
+            "label": "Experience",
+            "children": [
+                { "id": "experience", "label": "Experiencia" },
+                { "id": "recommendations", "label": "Referencias" }
+            ]
+            },
             { "id": "skills", "label": "Skills" },
             { "id": "projects", "label": "Projects" },
             { "id": "education", "label": "Education" },
@@ -133,6 +140,14 @@
                     "technologies": ["HTML", "CSS", "JavaScript", "React", "Git", "Node.js", "Slack", "Agile methodologies"]
                 }
         ]
+    },
+    "references": {
+        "title": "References",
+        "lastUpdate": "Last update",
+        "navigation": {
+        "previous": "Previous",
+        "next": "Next"
+        }
     },
     "education": {
         "title": "Education",

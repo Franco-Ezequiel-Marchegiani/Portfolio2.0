@@ -1,4 +1,5 @@
-export type NavItems = {
-    id: string; 
+export interface NavItem {
+    id: string;
     label: string;
-};
+    children?: NavItem[];
+}

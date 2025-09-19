@@ -1,15 +1,22 @@
 {
     "header": {
-        "title": "Portfolio",
-        "navItems": [
-            { "id": "home", "label": "Inicio" },
-            { "id": "about", "label": "Sobre Mí" },
+    "title": "Portfolio",
+    "navItems": [
+        { "id": "home", "label": "Inicio" },
+        { "id": "about", "label": "Sobre Mí" },
+        { 
+        "id": "experience",
+        "label": "Experiencia",
+        "children": [
             { "id": "experience", "label": "Experiencia" },
-            { "id": "skills", "label": "Habilidades" },
-            { "id": "projects", "label": "Proyectos" },
-            { "id": "education", "label": "Educación" },
-            { "id": "contact", "label": "Contacto" }
+            { "id": "recommendations", "label": "Referencias" }
         ]
+        },
+        { "id": "skills", "label": "Habilidades" },
+        { "id": "projects", "label": "Proyectos" },
+        { "id": "education", "label": "Educación" },
+        { "id": "contact", "label": "Contacto" }
+    ]
     },
     "hero": {
         "initials": "FM",
@@ -133,6 +140,14 @@
                     "technologies": ["HTML", "CSS", "JavaScript", "React", "Git", "Node.js", "Slack", "Metodologías Ágiles"]
                 }
         ]
+    },
+    "references": {
+        "title": "Recomendaciones",
+        "lastUpdate": "Última actualización",
+        "navigation": {
+        "previous": "Anterior",
+        "next": "Siguiente"
+        }
     },
     "education": {
         "title": "Educación",

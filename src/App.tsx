@@ -10,6 +10,7 @@ import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { TranslationProvider } from './context/TranslationContext';
 import { ScrollToTopButton } from './components/ScrollToTopButton';
+import { References } from './components/References';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -51,6 +52,7 @@ function App() {
           <Hero />
           <About />
           <Experience />
+          <References />
           <Skills />
           <Projects />
           <Education />

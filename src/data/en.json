@@ -8,8 +8,8 @@
             "id": "experience",
             "label": "Experience",
             "children": [
-                { "id": "experience", "label": "Experiencia" },
-                { "id": "recommendations", "label": "Referencias" }
+                { "id": "experience", "label": "Experience" },
+                { "id": "recommendations", "label": "References" }
             ]
             },
             { "id": "skills", "label": "Skills" },

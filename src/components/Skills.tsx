@@ -68,12 +68,12 @@ export const Skills: React.FC = () => {
             <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
                 <span className="bg-gradient-to-r from-blue-600 to-green-500 bg-clip-text text-transparent">
-                    {t<string>("projects.title", "")} {'\n'}
+                    {t<string>("skills.title", "")} {'\n'}
                 </span> 
-                {t<string>("projects.title2", "")}
+                {t<string>("skills.title2", "")}
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-                {t<string>("projects.subtitle", "")}
+                {t<string>("skills.subtitle", "")}
             </p>
             </div>
 

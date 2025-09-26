@@ -117,7 +117,7 @@ export const FormEmail: React.FC = () => {
                     <div className="text-center py-12">
                         <TriangleAlert className="h-16 w-16 text-yellow-500 mx-auto mb-4" />
                         <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                            {t<string>("contactForm.alreadySent.title", "")}{formatTime(timeLeft)}.
+                            {t<string>("contactForm.alreadySent.title", "")} {formatTime(timeLeft)}.
                         </h4>
                         <p className="text-gray-600 dark:text-gray-400">
                         {t<string>("contactForm.alreadySent.text", "")}

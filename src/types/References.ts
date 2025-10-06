@@ -7,3 +7,11 @@ export interface Reference {
     text_eng: string;
     image_url?: string;
 }
+
+export interface ReferencesData {
+    extraction_date: string;
+    recommendations: {
+        received: Reference[];
+        given: Reference[];
+    };
+}

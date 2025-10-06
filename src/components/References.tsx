@@ -2,38 +2,36 @@ import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import referencesData from "../../Python/Data/recommendations.json";
-import type { Reference } from "../types/References";
 import { useTranslation } from "../hooks/useTranslation";
-
+import imageDefault from '../../public/images.png';
+import type { ReferencesData } from "../types/References";
 export const References: React.FC = () => {
     const { t, lang } = useTranslation();
-    const { extraction_date, recommendations } = referencesData as {
-        extraction_date: string;
-        recommendations: Reference[];
-    };
+    const { extraction_date, recommendations } = referencesData as ReferencesData;
 
+    const received = recommendations.received;
     const [index, setIndex] = useState(0);
     const [resetCounter, setResetCounter] = useState(0);
 
     useEffect(() => {
     const interval = setInterval(() => {
-        setIndex((prev) => (prev + 1) % recommendations.length);
+        setIndex((prev) => (prev + 1) % received.length);
     }, 8000);
 
     return () => clearInterval(interval);
-    }, [recommendations.length, resetCounter]);
+    }, [received.length, resetCounter]);
 
     const next = () => {
-        setIndex((prev) => (prev + 1) % recommendations.length);
+        setIndex((prev) => (prev + 1) % received.length);
         setResetCounter((c) => c + 1); // 🔄 reinicia el contador
     };
 
     const prev = () => {
-        setIndex((prev) => (prev - 1 + recommendations.length) % recommendations.length);
+        setIndex((prev) => (prev - 1 + received.length) % received.length);
         setResetCounter((c) => c + 1); // 🔄 reinicia el contador
     };
 
-    const current = recommendations[index];
+    const current = received[index];
     const formattedDate = extraction_date.split(" ")[0];
     return (
         <section id="recommendations" className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900/50">
@@ -54,7 +52,7 @@ export const References: React.FC = () => {
                     >
                     {/* Imagen circular */}
                     <div className="w-20 h-20 rounded-full bg-gradient-to-r from-blue-600 to-green-500 flex items-center justify-center text-white shadow-md">
-                        <img src={current.image_url} alt="Image_Profile" className="rounded-full" />
+                        <img src={current.image_url !== "" ? current.image_url : imageDefault} alt="Image_Profile" className="rounded-full" />
                     </div>
 
                     {/* Nombre y rol */}

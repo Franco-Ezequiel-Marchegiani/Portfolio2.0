@@ -5,5 +5,5 @@ export interface Reference {
     relation_eng: string;
     text: string;
     text_eng: string;
-    image_url: string;
+    image_url?: string;
 }
